@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword"  content="undefined">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Windows伪装文件夹 - 四天博客
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <link href="//at.alicdn.com/t/font_1335590_gsy2em9cgz.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 四天博客 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+             <li>
+                <a href="http://www.liangshitian.top/file" target="_blank"
+                    <i class="iconfont icon-gongxiangtubiaozhuangtaileicaozuolei55"></i>
+                    <span> &nbsp;资源</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 四天博客 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Windows伪装文件夹
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-02-22 00:00:00</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#Windows" title="Windows">Windows</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#伪装" title="伪装">伪装</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#文件夹" title="文件夹">文件夹</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#隐藏" title="隐藏">隐藏</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>随便一个盘里建一个文件夹 然后把你想隐藏的东西放到文件夹里然后给文件夹命名为“123.{21ec2020-3aea-1069-a2dd-08002b30309d}” （123是随便打的名字，也可以打成别的名，不过最好是数字或字母，不要打汉字）<br>恢复：把你的控制面板的文件夹改回123或你自己命名的名字，打开运行，cmd，文件夹所在盘，-ren 123.{21ec2020-3aea-1069-a2dd-08002b30309d} 123<br>文件夹重命名为：</p>
+<pre><code class="language-css">网上邻居.{208D2C60-3AEA-1069-A2D7-08002B30309D}  </code></pre>
+还原方法：运行-cmd-cd desktop-ren 网上邻居.{208D2C60-3AEA-1069-A2D7-08002B30309D} 123  
+
+附上常用电脑类标识符CLSID：
+<pre><code class="language-css">  excel.{00020810-0000-0000-C000-000000000046}  
+word.{00020900-0000-0000-C000-000000000046}  
+media.{00022603-0000-0000-C000-000000000046}  
+CAB.{0CD7A5C0-9F37-11CE-AE65-08002B2E1262}  
+计划任务.{148BD520-A2AB-11CE-B11F-00AA00530503}  
+搜索-计算机{1f4de370-d627-11d1-ba4f-00a0c91eedba}  
+网上邻居.{208D2C60-3AEA-1069-A2D7-08002B30309D}  
+我的电脑.{20D04FE0-3AEA-1069-A2D8-08002B30309D}  
+控制面板.{21EC2020-3AEA-1069-A2DD-08002B30309D}  
+打印机.{2227A280-3AEA-1069-A2DE-08002B30309D}  
+html.{25336920-03f9-11cf-8fd0-00aa00686f13}  
+mht.{3050F3D9-98B5-11CF-BB82-00AA00BDCE0B}  
+mshta.{3050f4d8-98B5-11CF-BB82-00AA00BDCE0B}  
+我的文档.{450D8FBA-AD25-11D0-98A8-0800361B1103}  
+XML.{48123bc4-99d9-11d1-a6b3-00c04fd91555}  
+回收站(满).{5ef4af3a-f726-11d0-b8a2-00c04fc309a4}  
+回收站.{645FF040-5081-101B-9F08-00AA002F954E}  
+ftp_folder.{63da6ec0-2e98-11cf-8d82-444553540000}  
+网络和拨号连接.{7007ACC7-3202-11D1-AAD2-00805FC1270E}  
+写字板文档.{73FDDC80-AEA9-101A-98A7-00AA00374959}  
+Temporary Offline Files Cleaner.{750fdf0f-2a26-11d1-a3ea-080036587f03}  
+用户和密码.{7A9D77BD-5403-11d2-8785-2E0420524153}  
+Internet 临时文件.{7BD29E00-76C1-11CF-9DD0-00A0C9034933}  
+已下载的程序文件的清除程序.{8369AB20-56C9-11D0-94E8-00AA0059CE02}  
+公文包.{85BBD920-42A0-1069-A2E4-08002B30309D}  
+ActiveX 高速缓存文件夹.{88C6C381-2E85-11D0-94DE-444553540000}    
+mail.{9E56BE60-C50F-11CF-9A2C-00A0C90A90CE}  
+历史记录.{FF393560-C2A7-11CF-BFF4-444553540000}    
+目录.{fe1290f0-cfbd-11cf-a330-00aa00c16e65}  
+Internet Explorer.{FBF23B42-E3F0-101B-8488-00AA003E56F8}  
+Snapshot File.{FACB5ED2-7F99-11D0-ADE2-00A0C90DC8D9}  
+预订文件夹.{F5175861-2688-11d0-9C5E-00AA00A45957}  
+MyDocs Drop Target.{ECF03A32-103D-11d2-854D-006008059367}  
+Policy Package.{ecabaebd-7f19-11d2-978E-0000f8757e2a}  
+搜索结果.{e17d4fc0-5564-11d1-83f2-00a0c90dc849}  
+添加网上邻居.{D4480A50-BA28-11d1-8E75-00C04FA31A86}  
+Paint.{D3E34B21-9D75-101A-8C3D-00AA001A1652}  
+管理工具.{D20EA4E1-3957-11d2-A40B-0C5020524153}  
+字体.{D20EA4E1-3957-11d2-A40B-0C5020524152}  
+Web Folders.{BDEADF00-C265-11d0-BCED-00A0C90AB50F}  
+DocFind Command.{B005E690-678D-11d1-B758-00A0C90564FE}  
+脱机文件夹.{AFDB1F70-2A4C-11d2-9039-00C04F8EEB3E}  
+打印机.{2227A280-3AEA-1069-A2DE-08002B30309D}  
+上帝模式.{ED7BA470-8E54-465E-825C-99712043E01C}</code></pre>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/1687679507">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/a512154224">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank"  href="tencent://message/?uin=512154224&Site=&Menu=yes">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-QQ"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+    </ul>
+    
+    <p>
+   <!--     <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span> -->
+        
+        Copyright &copy; 2017-至今 &nbsp;<a href="http://www.liangshitian.top"  title="四天博客">四天</a>&nbsp;&nbsp;  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
