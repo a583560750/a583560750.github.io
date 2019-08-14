@@ -1,0 +1,819 @@
+<!doctype html><html>
+<head><meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<head><title>1</title>
+</head>
+<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css">
+<style type="text/css">
+	body{
+		font-family:"Helvetica Neue","Helvetica","Microsoft Yahei","微软雅黑","Lantinghei SC","STXihei","WenQuanYi Micro Hei",Arial,sans-serif;
+		text-align:justify;margin:auto;font-size:14px;line-height:1.6em;
+		color:#333;background:#fefefe;padding:15px;margin:30px auto;position: relative;
+		-webkit-font-smoothing: antialiased;font-smoothing: antialiased;
+	}
+	
+	article,footer,header,nav{margin:0 auto}
+	article{margin-top:4em;margin-bottom:4em;min-height:400px}
+	footer{margin-bottom:50px}
+	video{margin:2em 0;border:1px solid #ddd}
+	nav{font-size:.9em;font-style:italic;border-bottom:1px solid #ddd;padding:1em 0}
+	nav p{margin:0}
+	details{margin: 15px 0;}
+	summary{cursor:pointer;padding: 4px;}
+	summary:focus{outline: none;box-shadow: 0 0 3px #2196F3;}
+	.h1,h1{font-size:2.2em;}
+	.h2,h2{font-size:1.9em;}
+	.h3,h3{font-size:1.6em;}
+	.h4,h4{font-size:1.3em;}
+	.h5,h5{font-size:1.2em;}
+	.h6,h6{font-size:1.1em;}
+	.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{
+		font-family:inherit;font-weight:500;color: #333;
+		line-height: 1.2em;padding: 0.3em 0;margin: 0.8em 0 0.4em 0;
+		word-break: break-all;
+	}
+	.h1,h1{letter-spacing: 1px;border-bottom: 1px solid #ddd;}
+	.h2,h2{padding-bottom: 0.15em;}
+	p{-webkit-hypens:auto;-moz-hypens:auto;hyphens:auto;margin:10px 0;}
+	p,li,div,ul{word-wrap: break-all;}
+	blockquote{margin-left:1em;padding:10px 15px;margin:10px 0 20px 0;border-left:10px solid #ddd;background: #f6f6f6;}
+	blockquote p{margin:0;font-weight:400;}
+	code{
+		padding: 2px 4px;color: #c7254e;background-color:#f9f2f4;border-radius: 4px;
+	}
+	pre{display:block;padding:0;overflow:auto;margin:0 0 10px;font-size:1em;line-height:1.42857143;
+		word-break:break-all;word-wrap:break-word;color:#333;background:none;border-radius:4px}
+	code,kbd,pre,samp{
+		font-family:Consolas,'Liberation Mono','Ubuntu Mono',Menlo,Courier,sans-serif;
+	}
+	pre code{background:#f8f8f8;color:#777;white-space:pre-wrap;padding:6px 1em;border:1px solid #eee;display: block;}
+	a{color:#1980e6;text-decoration:none}
+	a:hover{text-decoration:underline}
+	a img{border:none}
+	img{max-width: 100%;}
+	h1 a,h1 a:hover{text-decoration:none}
+	hr{border: 0 none;height: 4px;margin:1.2em 0;
+	    background: rgba(0, 0, 0, 0) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+	}
+	@media screen and (min-width: 900px) {
+		body {width: 900px;}
+	}
+	ul,ol{padding:0.2em 0 0.2em 2em;}
+	table {border-collapse: collapse;border-spacing: 0;margin-bottom: 20px;}
+	table thead{background: #eee;}
+	table td,table th{padding: .5em;border: 1px solid #ddd;line-height: 1.5;}
+	.markdown-flow{background:#fff;padding: 15px;}
+	.markdown-flow .label{color:#444;}
+	.markdown-latex {
+		text-align: center;font-size:1.3em;color: #000;
+		margin-bottom: 1.5em;overflow: hidden;overflow-x:auto;
+	}
+	.latex-inline .katex-display{display:inline-block;font-size: 0.8em;}
+	.markdown-menu ul{padding:0 10px 20px 20px;}
+	.markdown-menu li{
+		font-size:14px;list-style:none;
+		line-height:1.8em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+	}
+	.markdown-menu-h2{padding-left:2em;}
+	.markdown-menu-h3{padding-left:4em;}
+	.markdown-menu-h4{padding-left:6em;}
+	.markdown-menu-h5{padding-left:8em;}
+	.markdown-menu-h6{padding-left:10em;}
+
+	div .hljs{color: #666;}
+	.hljs-comment,.hljs-quote{color:#998;font-style:italic}
+	.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}
+	.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,
+		.hljs-template-variable,.hljs-variable{color:teal}
+	.hljs-doctag,.hljs-string{color:#d14}
+	.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}
+	.hljs-subst{font-weight:400}
+	.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}
+	.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}
+	.hljs-meta,.hljs-strong{font-weight:700}
+	.hljs-link,.hljs-regexp{color:#009926}
+	.hljs-bullet,.hljs-symbol{color:#990073}
+	.hljs-built_in,.hljs-builtin-name{color:#0086b3}
+	.hljs-meta{color:#999}
+	.hljs-deletion{background:#fdd}
+	.hljs-addition{background:#dfd}
+	.hljs-emphasis{font-style:italic}
+
+	/* black theme */
+	body.code-theme-black{background:#333;color:#bbb}
+	body.code-theme-black blockquote{
+		border-color:#444;border-color:rgba(200,200,200,.1);
+		background:#444;background:rgba(200,200,200,.1);
+	}
+	body.code-theme-black .h1,body.code-theme-black h1{border-bottom: 1px solid rgba(200,200,200,.2);}
+
+	body.code-theme-black code,body.code-theme-black pre,body.code-theme-black pre code{color:#777;border-color:#444;border-color:rgba(0,0,0,.1);background:#444;background:rgba(0,0,0,.1)}
+	body.code-theme-black code{color:#C5AC18;background:#555;background:rgba(255,255,255,0.15);}
+	body.code-theme-black a{color:orange}
+
+	body.code-theme-black .h1,body.code-theme-black h1,
+	body.code-theme-black .h2,body.code-theme-black h2,
+	body.code-theme-black .h3,body.code-theme-black h3,
+	body.code-theme-black .h4,body.code-theme-black h4,
+	body.code-theme-black .h5,body.code-theme-black h5,
+	body.code-theme-black .h6,body.code-theme-black h6{
+		color: #fff;
+	}
+	body.code-theme-black hr{border-bottom:solid 1px #444;border-color:rgba(200,200,200,.1);background-image:none;}
+	body.code-theme-black table thead{background: #3e3e3e;}
+	body.code-theme-black table td,body.code-theme-black table th{border-color:#444;border-color:rgba(200,200,200,.1)}
+	body.code-theme-black .markdown-latex {color: #fff;}
+	body.code-theme-black div .hljs{display:block;overflow-x:auto;padding:.5em;background:#23241f}
+	body.code-theme-black .hljs,body.code-theme-black .hljs-subst,body.code-theme-black .hljs-tag{color:#f8f8f2}
+	body.code-theme-black .hljs-emphasis,body.code-theme-black .hljs-strong{color:#a8a8a2}
+	body.code-theme-black .hljs-bullet,body.code-theme-black .hljs-link,body.code-theme-black .hljs-literal,body.code-theme-black .hljs-number,body.code-theme-black .hljs-quote,body.code-theme-black .hljs-regexp{color:#ae81ff}
+	body.code-theme-black .hljs-code,body.code-theme-black .hljs-section,body.code-theme-black .hljs-selector-class,body.code-theme-black .hljs-title{color:#a6e22e}
+	body.code-theme-black .hljs-strong{font-weight:700}
+	body.code-theme-black .hljs-emphasis{font-style:italic}
+	body.code-theme-black .hljs-attr,body.code-theme-black .hljs-keyword,body.code-theme-black .hljs-name,body.code-theme-black .hljs-selector-tag{color:#f92672}
+	body.code-theme-black .hljs-attribute,body.code-theme-black .hljs-symbol{color:#66d9ef}
+	body.code-theme-black .hljs-class .hljs-title,body.code-theme-black .hljs-params{color:#f8f8f2}
+	body.code-theme-black .hljs-addition,body.code-theme-black .hljs-built_in,body.code-theme-black .hljs-builtin-name,body.code-theme-black .hljs-selector-attr,body.code-theme-black .hljs-selector-id,body.code-theme-black .hljs-selector-pseudo,body.code-theme-black .hljs-string,body.code-theme-black .hljs-template-variable,body.code-theme-black .hljs-type,body.code-theme-black .hljs-variable{color:#e6db74}
+	body.code-theme-black .hljs-comment,body.code-theme-black .hljs-deletion,body.code-theme-black .hljs-meta{color:#75715e}
+
+	.print-btn{
+		position:absolute;padding:4px 20px;color:#444;font-size:1em;
+		background:#eee;background:rgba(200,200,200,0.2);margin-top: -45px;right:15px;
+	}
+	.print-btn:hover{text-decoration: none;background: #14a2ff;color: #fff;}
+
+	.hidden{display:none !important;}
+	/*markdown 锚点*/
+	.target-menu{
+		position: absolute;margin-left: -1.5em;
+		display: inline-block;text-align: center;width: 2em;
+	}
+	h1:hover .target-menu,h2:hover .target-menu,h3:hover .target-menu,
+	h4:hover .target-menu,h5:hover .target-menu,h6:hover .target-menu{display:block !important;visibility: visible !important;}
+
+	/*打印样式*/
+	@media print {
+		body{padding:0 1.5cm;margin:0 auto 10px auto;font-size:13px;}
+		.print-btn{display: none;}
+	}
+</style>
+<body >
+<a href="javascript:window.print();" class="print-btn">打印(Print)</a>
+<h1 data-link="#frp"><a class="target-menu hidden" href="#frp">#</a><a name="frp"></a>frp</h1>
+<p>frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp 协议，为 http 和 https 应用协议提供了额外的能力，且尝试性支持了点对点穿透。</p>
+<h2 data-link="#目录"><a class="target-menu hidden" href="#目录">#</a><a name="目录"></a>目录</h2>
+<!-- vim-markdown-toc GFM -->
+<ul>
+<li><a href="#%E5%BC%80%E5%8F%91%E7%8A%B6%E6%80%81" target="_blank">开发状态</a></li>
+<li><a href="#%E6%9E%B6%E6%9E%84" target="_blank">架构</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B" target="_blank">使用示例</a>
+<ul>
+<li><a href="#%E9%80%9A%E8%BF%87-ssh-%E8%AE%BF%E9%97%AE%E5%85%AC%E5%8F%B8%E5%86%85%E7%BD%91%E6%9C%BA%E5%99%A8" target="_blank">通过 ssh 访问公司内网机器</a></li>
+<li><a href="#%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E9%83%A8%E7%BD%B2%E4%BA%8E%E5%86%85%E7%BD%91%E7%9A%84-web-%E6%9C%8D%E5%8A%A1" target="_blank">通过自定义域名访问部署于内网的 web 服务</a></li>
+<li><a href="#%E8%BD%AC%E5%8F%91-dns-%E6%9F%A5%E8%AF%A2%E8%AF%B7%E6%B1%82" target="_blank">转发 DNS 查询请求</a></li>
+<li><a href="#%E8%BD%AC%E5%8F%91-unix-%E5%9F%9F%E5%A5%97%E6%8E%A5%E5%AD%97" target="_blank">转发 Unix 域套接字</a></li>
+<li><a href="#%E5%AF%B9%E5%A4%96%E6%8F%90%E4%BE%9B%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%E6%9C%8D%E5%8A%A1" target="_blank">对外提供简单的文件访问服务</a></li>
+<li><a href="#%E4%B8%BA%E6%9C%AC%E5%9C%B0-http-%E6%9C%8D%E5%8A%A1%E5%90%AF%E7%94%A8-https" target="_blank">为本地 HTTP 服务启用 HTTPS</a></li>
+<li><a href="#%E5%AE%89%E5%85%A8%E5%9C%B0%E6%9A%B4%E9%9C%B2%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1" target="_blank">安全地暴露内网服务</a></li>
+<li><a href="#%E7%82%B9%E5%AF%B9%E7%82%B9%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F" target="_blank">点对点内网穿透</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E" target="_blank">功能说明</a>
+<ul>
+<li><a href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" target="_blank">配置文件</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%A8%A1%E7%89%88%E6%B8%B2%E6%9F%93" target="_blank">配置文件模版渲染</a></li>
+<li><a href="#dashboard" target="_blank">Dashboard</a></li>
+<li><a href="#admin-ui" target="_blank">Admin UI</a></li>
+<li><a href="#%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81" target="_blank">身份验证</a></li>
+<li><a href="#%E5%8A%A0%E5%AF%86%E4%B8%8E%E5%8E%8B%E7%BC%A9" target="_blank">加密与压缩</a>
+<ul>
+<li><a href="#tls" target="_blank">TLS</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%83%AD%E5%8A%A0%E8%BD%BD%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" target="_blank">客户端热加载配置文件</a></li>
+<li><a href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%9F%A5%E7%9C%8B%E4%BB%A3%E7%90%86%E7%8A%B6%E6%80%81" target="_blank">客户端查看代理状态</a></li>
+<li><a href="#%E7%AB%AF%E5%8F%A3%E7%99%BD%E5%90%8D%E5%8D%95" target="_blank">端口白名单</a></li>
+<li><a href="#%E7%AB%AF%E5%8F%A3%E5%A4%8D%E7%94%A8" target="_blank">端口复用</a></li>
+<li><a href="#tcp-%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8" target="_blank">TCP 多路复用</a></li>
+<li><a href="#%E5%BA%95%E5%B1%82%E9%80%9A%E4%BF%A1%E5%8F%AF%E9%80%89-kcp-%E5%8D%8F%E8%AE%AE" target="_blank">底层通信可选 kcp 协议</a></li>
+<li><a href="#%E8%BF%9E%E6%8E%A5%E6%B1%A0" target="_blank">连接池</a></li>
+<li><a href="#%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1" target="_blank">负载均衡</a></li>
+<li><a href="#%E5%81%A5%E5%BA%B7%E6%A3%80%E6%9F%A5" target="_blank">健康检查</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9-host-header" target="_blank">修改 Host Header</a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AE-http-%E8%AF%B7%E6%B1%82%E7%9A%84-header" target="_blank">设置 HTTP 请求的 header</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E7%9C%9F%E5%AE%9E-ip" target="_blank">获取用户真实 IP</a>
+<ul>
+<li><a href="#http-x-forwarded-for" target="_blank">HTTP X-Forwarded-For</a></li>
+<li><a href="#proxy-protocol" target="_blank">Proxy Protocol</a></li>
+</ul>
+</li>
+<li><a href="#%E9%80%9A%E8%BF%87%E5%AF%86%E7%A0%81%E4%BF%9D%E6%8A%A4%E4%BD%A0%E7%9A%84-web-%E6%9C%8D%E5%8A%A1" target="_blank">通过密码保护你的 web 服务</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D" target="_blank">自定义二级域名</a></li>
+<li><a href="#url-%E8%B7%AF%E7%94%B1" target="_blank">URL 路由</a></li>
+<li><a href="#%E9%80%9A%E8%BF%87%E4%BB%A3%E7%90%86%E8%BF%9E%E6%8E%A5-frps" target="_blank">通过代理连接 frps</a></li>
+<li><a href="#%E8%8C%83%E5%9B%B4%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84" target="_blank">范围端口映射</a></li>
+<li><a href="#%E6%8F%92%E4%BB%B6" target="_blank">插件</a></li>
+</ul>
+</li>
+</ul>
+<!-- vim-markdown-toc -->
+<h2 data-link="#开发状态"><a class="target-menu hidden" href="#开发状态">#</a><a name="开发状态"></a>开发状态</h2>
+<p>frp 仍然处于开发阶段，未经充分测试与验证，不推荐用于生产环境。</p>
+<p>master 分支用于发布稳定版本，dev 分支用于开发，您可以尝试下载最新的 release 版本进行测试。</p>
+<p><strong>目前的交互协议可能随时改变，不保证向后兼容，升级新版本时需要注意公告说明同时升级服务端和客户端。</strong></p>
+<h2 data-link="#使用示例"><a class="target-menu hidden" href="#使用示例">#</a><a name="使用示例"></a>使用示例</h2>
+<p>根据对应的操作系统及架构，从 <a href="https://github.com/fatedier/frp/releases" target="_blank">Release</a> 页面下载最新版本的程序。</p>
+<p>将 <strong>frps</strong> 及 <strong>frps.ini</strong> 放到具有公网 IP 的机器上。</p>
+<p>将 <strong>frpc</strong> 及 <strong>frpc.ini</strong> 放到处于内网环境的机器上。</p>
+<h3 data-link="#通过-ssh-访问公司内网机器"><a class="target-menu hidden" href="#通过-ssh-访问公司内网机器">#</a><a name="通过-ssh-访问公司内网机器"></a>通过 ssh 访问公司内网机器</h3>
+<ol>
+<li>修改 frps.ini 文件，这里使用了最简化的配置：</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frps.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">bind_port</span> = <span class="hljs-number">7000</span>
+</code></pre>
+<ol start="2">
+<li>启动 frps：</li>
+</ol>
+<p><code>./frps -c ./frps.ini</code></p>
+<ol start="3">
+<li>修改 frpc.ini 文件，假设 frps 所在服务器的公网 IP 为 x.x.x.x；</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">server_addr</span> = x.x.x.x
+<span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-section">
+[ssh]</span>
+<span class="hljs-attr">type</span> = tcp
+<span class="hljs-attr">local_ip</span> = <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">22</span>
+<span class="hljs-attr">remote_port</span> = <span class="hljs-number">6000</span>
+</code></pre>
+<ol start="4">
+<li>启动 frpc：</li>
+</ol>
+<p><code>./frpc -c ./frpc.ini</code></p>
+<ol start="5">
+<li>通过 ssh 访问内网机器，假设用户名为 test：</li>
+</ol>
+<p><code>ssh -oPort=6000 test@x.x.x.x</code></p>
+<h3 data-link="#通过自定义域名访问部署于内网的-web-服务"><a class="target-menu hidden" href="#通过自定义域名访问部署于内网的-web-服务">#</a><a name="通过自定义域名访问部署于内网的-web-服务"></a>通过自定义域名访问部署于内网的 web 服务</h3>
+<p>有时想要让其他人通过域名访问或者测试我们在本地搭建的 web 服务，但是由于本地机器没有公网 IP，无法将域名解析到本地的机器，通过 frp 就可以实现这一功能，以下示例为 http 服务，https 服务配置方法相同， vhost_http_port 替换为 vhost_https_port， type 设置为 https 即可。</p>
+<ol>
+<li>修改 frps.ini 文件，设置 http 访问端口为 8080：</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frps.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">bind_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-attr">vhost_http_port</span> = <span class="hljs-number">8080</span>
+</code></pre>
+<ol start="2">
+<li>启动 frps；</li>
+</ol>
+<p><code>./frps -c ./frps.ini</code></p>
+<ol start="3">
+<li>修改 frpc.ini 文件，假设 frps 所在的服务器的 IP 为 x.x.x.x，local_port 为本地机器上 web 服务对应的端口, 绑定自定义域名 <code>www.yourdomain.com</code>:</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">server_addr</span> = x.x.x.x
+<span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-section">
+[web]</span>
+<span class="hljs-attr">type</span> = http
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">80</span>
+<span class="hljs-attr">custom_domains</span> = www.yourdomain.com
+</code></pre>
+<ol start="4">
+<li>启动 frpc：</li>
+</ol>
+<p><code>./frpc -c ./frpc.ini</code></p>
+<ol start="5">
+<li>
+<p>将 <code>www.yourdomain.com</code> 的域名 A 记录解析到 IP <code>x.x.x.x</code>，如果服务器已经有对应的域名，也可以将 CNAME 记录解析到服务器原先的域名。</p>
+</li>
+<li>
+<p>通过浏览器访问 <code>http://www.yourdomain.com:8080</code> 即可访问到处于内网机器上的 web 服务。</p>
+</li>
+</ol>
+<h3 data-link="#转发-DNS-查询请求"><a class="target-menu hidden" href="#转发-DNS-查询请求">#</a><a name="转发-DNS-查询请求"></a>转发 DNS 查询请求</h3>
+<p>DNS 查询请求通常使用 UDP 协议，frp 支持对内网 UDP 服务的穿透，配置方式和 TCP 基本一致。</p>
+<ol>
+<li>修改 frps.ini 文件：</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frps.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">bind_port</span> = <span class="hljs-number">7000</span>
+</code></pre>
+<ol start="2">
+<li>启动 frps：</li>
+</ol>
+<p><code>./frps -c ./frps.ini</code></p>
+<ol start="3">
+<li>修改 frpc.ini 文件，设置 frps 所在服务器的 IP 为 x.x.x.x，转发到 Google 的 DNS 查询服务器 <code>8.8.8.8</code> 的 udp 53 端口：</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">server_addr</span> = x.x.x.x
+<span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-section">
+[dns]</span>
+<span class="hljs-attr">type</span> = udp
+<span class="hljs-attr">local_ip</span> = <span class="hljs-number">8.8</span>.<span class="hljs-number">8.8</span>
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">53</span>
+<span class="hljs-attr">remote_port</span> = <span class="hljs-number">6000</span>
+</code></pre>
+<ol start="4">
+<li>启动 frpc：</li>
+</ol>
+<p><code>./frpc -c ./frpc.ini</code></p>
+<ol start="5">
+<li>通过 dig 测试 UDP 包转发是否成功，预期会返回 <code>www.google.com</code> 域名的解析结果：</li>
+</ol>
+<p><code>dig @x.x.x.x -p 6000 www.google.com</code></p>
+<h3 data-link="#转发-Unix-域套接字"><a class="target-menu hidden" href="#转发-Unix-域套接字">#</a><a name="转发-Unix-域套接字"></a>转发 Unix 域套接字</h3>
+<p>通过 tcp 端口访问内网的 unix域套接字(例如和 docker daemon 通信)。</p>
+<p>frps 的部署步骤同上。</p>
+<ol>
+<li>启动 frpc，启用 <code>unix_domain_socket</code> 插件，配置如下：</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">server_addr</span> = x.x.x.x
+<span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-section">
+[unix_domain_socket]</span>
+<span class="hljs-attr">type</span> = tcp
+<span class="hljs-attr">remote_port</span> = <span class="hljs-number">6000</span>
+<span class="hljs-attr">plugin</span> = unix_domain_socket
+<span class="hljs-attr">plugin_unix_path</span> = /var/run/docker.sock
+</code></pre>
+<ol start="2">
+<li>通过 curl 命令查看 docker 版本信息</li>
+</ol>
+<p><code>curl http://x.x.x.x:6000/version</code></p>
+<h3 data-link="#对外提供简单的文件访问服务"><a class="target-menu hidden" href="#对外提供简单的文件访问服务">#</a><a name="对外提供简单的文件访问服务"></a>对外提供简单的文件访问服务</h3>
+<p>通过 <code>static_file</code> 插件可以对外提供一个简单的基于 HTTP 的文件访问服务。</p>
+<p>frps 的部署步骤同上。</p>
+<ol>
+<li>启动 frpc，启用 <code>static_file</code> 插件，配置如下：</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">server_addr</span> = x.x.x.x
+<span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-section">
+[test_static_file]</span>
+<span class="hljs-attr">type</span> = tcp
+<span class="hljs-attr">remote_port</span> = <span class="hljs-number">6000</span>
+<span class="hljs-attr">plugin</span> = static_file
+<span class="hljs-comment"># 要对外暴露的文件目录</span>
+<span class="hljs-attr">plugin_local_path</span> = /tmp/file
+<span class="hljs-comment"># 访问 url 中会被去除的前缀，保留的内容即为要访问的文件路径</span>
+<span class="hljs-attr">plugin_strip_prefix</span> = static
+<span class="hljs-attr">plugin_http_user</span> = abc
+<span class="hljs-attr">plugin_http_passwd</span> = abc
+</code></pre>
+<ol start="2">
+<li>通过浏览器访问 <code>http://x.x.x.x:6000/static/</code> 来查看位于 <code>/tmp/file</code> 目录下的文件，会要求输入已设置好的用户名和密码。</li>
+</ol>
+<h3 data-link="#为本地-HTTP-服务启用-HTTPS"><a class="target-menu hidden" href="#为本地-HTTP-服务启用-HTTPS">#</a><a name="为本地-HTTP-服务启用-HTTPS"></a>为本地 HTTP 服务启用 HTTPS</h3>
+<p>通过 <code>https2http</code> 插件可以让本地 HTTP 服务转换成 HTTPS 服务对外提供。</p>
+<ol>
+<li>启用 frpc，启用 <code>https2http</code> 插件，配置如下:</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">server_addr</span> = x.x.x.x
+<span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-section">
+[test_htts2http]</span>
+<span class="hljs-attr">type</span> = https
+<span class="hljs-attr">custom_domains</span> = test.yourdomain.com
+
+<span class="hljs-attr">plugin</span> = https2http
+<span class="hljs-attr">plugin_local_addr</span> = <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">80</span>
+
+<span class="hljs-comment"># HTTPS 证书相关的配置</span>
+<span class="hljs-attr">plugin_crt_path</span> = ./server.crt
+<span class="hljs-attr">plugin_key_path</span> = ./server.key
+<span class="hljs-attr">plugin_host_header_rewrite</span> = <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>
+</code></pre>
+<ol start="2">
+<li>通过浏览器访问 <code>https://test.yourdomain.com</code> 即可。</li>
+</ol>
+<h3 data-link="#安全地暴露内网服务"><a class="target-menu hidden" href="#安全地暴露内网服务">#</a><a name="安全地暴露内网服务"></a>安全地暴露内网服务</h3>
+<p>对于某些服务来说如果直接暴露于公网上将会存在安全隐患。</p>
+<p>使用 <strong>stcp(secret tcp)</strong> 类型的代理可以避免让任何人都能访问到要穿透的服务，但是访问者也需要运行另外一个 frpc。</p>
+<p>以下示例将会创建一个只有自己能访问到的 ssh 服务代理。</p>
+<p>frps 的部署步骤同上。</p>
+<ol>
+<li>启动 frpc，转发内网的 ssh 服务，配置如下，不需要指定远程端口：</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">server_addr</span> = x.x.x.x
+<span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-section">
+[secret_ssh]</span>
+<span class="hljs-attr">type</span> = stcp
+<span class="hljs-comment"># 只有 sk 一致的用户才能访问到此服务</span>
+<span class="hljs-attr">sk</span> = abcdefg
+<span class="hljs-attr">local_ip</span> = <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">22</span>
+</code></pre>
+<ol start="2">
+<li>在要访问这个服务的机器上启动另外一个 frpc，配置如下：</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">server_addr</span> = x.x.x.x
+<span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-section">
+[secret_ssh_visitor]</span>
+<span class="hljs-attr">type</span> = stcp
+<span class="hljs-comment"># stcp 的访问者</span>
+<span class="hljs-attr">role</span> = visitor
+<span class="hljs-comment"># 要访问的 stcp 代理的名字</span>
+<span class="hljs-attr">server_name</span> = secret_ssh
+<span class="hljs-attr">sk</span> = abcdefg
+<span class="hljs-comment"># 绑定本地端口用于访问 ssh 服务</span>
+<span class="hljs-attr">bind_addr</span> = <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>
+<span class="hljs-attr">bind_port</span> = <span class="hljs-number">6000</span>
+</code></pre>
+<ol start="3">
+<li>通过 ssh 访问内网机器，假设用户名为 test：</li>
+</ol>
+<p><code>ssh -oPort=6000 test@127.0.0.1</code></p>
+<h3 data-link="#点对点内网穿透"><a class="target-menu hidden" href="#点对点内网穿透">#</a><a name="点对点内网穿透"></a>点对点内网穿透</h3>
+<p>frp 提供了一种新的代理类型 <strong>xtcp</strong> 用于应对在希望传输大量数据且流量不经过服务器的场景。</p>
+<p>使用方式同 <strong>stcp</strong> 类似，需要在两边都部署上 frpc 用于建立直接的连接。</p>
+<p>目前处于开发的初级阶段，并不能穿透所有类型的 NAT 设备，所以穿透成功率较低。穿透失败时可以尝试 <strong>stcp</strong> 的方式。</p>
+<ol>
+<li>frps 除正常配置外需要额外配置一个 udp 端口用于支持该类型的客户端:</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-attr">bind_udp_port</span> = <span class="hljs-number">7001</span>
+</code></pre>
+<ol start="2">
+<li>启动 frpc，转发内网的 ssh 服务，配置如下，不需要指定远程端口:</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">server_addr</span> = x.x.x.x
+<span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-section">
+[p2p_ssh]</span>
+<span class="hljs-attr">type</span> = xtcp
+<span class="hljs-comment"># 只有 sk 一致的用户才能访问到此服务</span>
+<span class="hljs-attr">sk</span> = abcdefg
+<span class="hljs-attr">local_ip</span> = <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">22</span>
+</code></pre>
+<ol start="3">
+<li>在要访问这个服务的机器上启动另外一个 frpc，配置如下:</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">server_addr</span> = x.x.x.x
+<span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-section">
+[p2p_ssh_visitor]</span>
+<span class="hljs-attr">type</span> = xtcp
+<span class="hljs-comment"># xtcp 的访问者</span>
+<span class="hljs-attr">role</span> = visitor
+<span class="hljs-comment"># 要访问的 xtcp 代理的名字</span>
+<span class="hljs-attr">server_name</span> = p2p_ssh
+<span class="hljs-attr">sk</span> = abcdefg
+<span class="hljs-comment"># 绑定本地端口用于访问 ssh 服务</span>
+<span class="hljs-attr">bind_addr</span> = <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>
+<span class="hljs-attr">bind_port</span> = <span class="hljs-number">6000</span>
+</code></pre>
+<ol start="4">
+<li>通过 ssh 访问内网机器，假设用户名为 test:</li>
+</ol>
+<p><code>ssh -oPort=6000 test@127.0.0.1</code></p>
+<h2 data-link="#功能说明"><a class="target-menu hidden" href="#功能说明">#</a><a name="功能说明"></a>功能说明</h2>
+<h3 data-link="#配置文件"><a class="target-menu hidden" href="#配置文件">#</a><a name="配置文件"></a>配置文件</h3>
+<p>由于 frp 目前支持的功能和配置项较多，未在文档中列出的功能可以从完整的示例配置文件中发现。</p>
+<p><a href="https://raw.githubusercontent.com/fatedier/frp/master/conf/frps_full.ini" target="_blank">frps 完整配置文件</a></p>
+<p><a href="https://raw.githubusercontent.com/fatedier/frp/master/conf/frpc_full.ini" target="_blank">frpc 完整配置文件</a></p>
+<h3 data-link="#配置文件模版渲染"><a class="target-menu hidden" href="#配置文件模版渲染">#</a><a name="配置文件模版渲染"></a>配置文件模版渲染</h3>
+<p>配置文件支持使用系统环境变量进行模版渲染，模版格式采用 Go 的标准格式。</p>
+<p>示例配置如下:</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">server_addr</span> = {{ .Envs.FRP_SERVER_ADDR }}
+<span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-section">
+[ssh]</span>
+<span class="hljs-attr">type</span> = tcp
+<span class="hljs-attr">local_ip</span> = <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">22</span>
+<span class="hljs-attr">remote_port</span> = {{ .Envs.FRP_SSH_REMOTE_PORT }}
+</code></pre>
+<p>启动 frpc 程序:</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">export</span> FRP_SERVER_ADDR=<span class="hljs-string">"x.x.x.x"</span>
+<span class="hljs-keyword">export</span> FRP_SSH_REMOTE_PORT=<span class="hljs-string">"6000"</span>
+./frpc -c ./frpc.ini
+</code></pre>
+<p>frpc 会自动使用环境变量渲染配置文件模版，所有环境变量需要以 <code>.Envs</code> 为前缀。</p>
+<h3 data-link="#Dashboard"><a class="target-menu hidden" href="#Dashboard">#</a><a name="Dashboard"></a>Dashboard</h3>
+<p>通过浏览器查看 frp 的状态以及代理统计信息展示。</p>
+<p><strong>注：Dashboard 尚未针对大量的 proxy 数据展示做优化，如果出现 Dashboard 访问较慢的情况，请不要启用此功能。</strong></p>
+<p>需要在 frps.ini 中指定 dashboard 服务使用的端口，即可开启此功能：</p>
+<pre><code class="language-ini hljs"><span class="hljs-section">[common]</span>
+<span class="hljs-attr">dashboard_port</span> = <span class="hljs-number">7500</span>
+<span class="hljs-comment"># dashboard 用户名密码，默认都为 admin</span>
+<span class="hljs-attr">dashboard_user</span> = admin
+<span class="hljs-attr">dashboard_pwd</span> = admin
+</code></pre>
+<p>打开浏览器通过 <code>http://[server_addr]:7500</code> 访问 dashboard 界面，用户名密码默认为 <code>admin</code>。</p>
+<h3 data-link="#Admin-UI"><a class="target-menu hidden" href="#Admin-UI">#</a><a name="Admin-UI"></a>Admin UI</h3>
+<p>Admin UI 可以帮助用户通过浏览器来查询和管理客户端的 proxy 状态和配置。</p>
+<p>需要在 frpc.ini 中指定 admin 服务使用的端口，即可开启此功能：</p>
+<pre><code class="language-ini hljs"><span class="hljs-section">[common]</span>
+<span class="hljs-attr">admin_addr</span> = <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>
+<span class="hljs-attr">admin_port</span> = <span class="hljs-number">7400</span>
+<span class="hljs-attr">admin_user</span> = admin
+<span class="hljs-attr">admin_pwd</span> = admin
+</code></pre>
+<p>打开浏览器通过 <code>http://127.0.0.1:7400</code> 访问 Admin UI，用户名密码默认为 <code>admin</code>。</p>
+<p>如果想要在外网环境访问 Admin UI，将 7400 端口映射出去即可，但需要重视安全风险。</p>
+<h3 data-link="#身份验证"><a class="target-menu hidden" href="#身份验证">#</a><a name="身份验证"></a>身份验证</h3>
+<p>服务端和客户端的 common 配置中的 <code>token</code> 参数一致则身份验证通过。</p>
+<h3 data-link="#加密与压缩"><a class="target-menu hidden" href="#加密与压缩">#</a><a name="加密与压缩"></a>加密与压缩</h3>
+<p>这两个功能默认是不开启的，需要在 frpc.ini 中通过配置来为指定的代理启用加密与压缩的功能，压缩算法使用 snappy：</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[ssh]</span>
+<span class="hljs-attr">type</span> = tcp
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">22</span>
+<span class="hljs-attr">remote_port</span> = <span class="hljs-number">6000</span>
+<span class="hljs-attr">use_encryption</span> = <span class="hljs-literal">true</span>
+<span class="hljs-attr">use_compression</span> = <span class="hljs-literal">true</span>
+</code></pre>
+<p>如果公司内网防火墙对外网访问进行了流量识别与屏蔽，例如禁止了 ssh 协议等，通过设置 <code>use_encryption = true</code>，将 frpc 与 frps 之间的通信内容加密传输，将会有效防止流量被拦截。</p>
+<p>如果传输的报文长度较长，通过设置 <code>use_compression = true</code> 对传输内容进行压缩，可以有效减小 frpc 与 frps 之间的网络流量，加快流量转发速度，但是会额外消耗一些 cpu 资源。</p>
+<h4 data-link="#TLS"><a class="target-menu hidden" href="#TLS">#</a><a name="TLS"></a>TLS</h4>
+<p>从 v0.25.0 版本开始 frpc 和 frps 之间支持通过 TLS 协议加密传输。通过在 <code>frpc.ini</code> 的 <code>common</code> 中配置 <code>tls_enable = true</code> 来启用此功能，安全性更高。</p>
+<p>为了端口复用，frp 建立 TLS 连接的第一个字节为 0x17。</p>
+<p><strong>注意: 启用此功能后除 xtcp 外，不需要再设置 use_encryption。</strong></p>
+<h3 data-link="#客户端热加载配置文件"><a class="target-menu hidden" href="#客户端热加载配置文件">#</a><a name="客户端热加载配置文件"></a>客户端热加载配置文件</h3>
+<p>当修改了 frpc 中的代理配置，可以通过 <code>frpc reload</code> 命令来动态加载配置文件，通常会在 10 秒内完成代理的更新。</p>
+<p>启用此功能需要在 frpc 中启用 admin 端口，用于提供 API 服务。配置如下：</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">admin_addr</span> = <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>
+<span class="hljs-attr">admin_port</span> = <span class="hljs-number">7400</span>
+</code></pre>
+<p>之后执行重启命令：</p>
+<p><code>frpc reload -c ./frpc.ini</code></p>
+<p>等待一段时间后客户端会根据新的配置文件创建、更新、删除代理。</p>
+<p><strong>需要注意的是，[common] 中的参数除了 start 外目前无法被修改。</strong></p>
+<h3 data-link="#客户端查看代理状态"><a class="target-menu hidden" href="#客户端查看代理状态">#</a><a name="客户端查看代理状态"></a>客户端查看代理状态</h3>
+<p>frpc 支持通过 <code>frpc status -c ./frpc.ini</code> 命令查看代理的状态信息，此功能需要在 frpc 中配置 admin 端口。</p>
+<h3 data-link="#端口白名单"><a class="target-menu hidden" href="#端口白名单">#</a><a name="端口白名单"></a>端口白名单</h3>
+<p>为了防止端口被滥用，可以手动指定允许哪些端口被使用，在 frps.ini 中通过 <code>allow_ports</code> 来指定：</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frps.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">allow_ports</span> = <span class="hljs-number">2000</span>-<span class="hljs-number">3000</span>,<span class="hljs-number">3001</span>,<span class="hljs-number">3003</span>,<span class="hljs-number">4000</span>-<span class="hljs-number">50000</span>
+</code></pre>
+<p><code>allow_ports</code> 可以配置允许使用的某个指定端口或者是一个范围内的所有端口，以 <code>,</code> 分隔，指定的范围以 <code>-</code> 分隔。</p>
+<h3 data-link="#端口复用"><a class="target-menu hidden" href="#端口复用">#</a><a name="端口复用"></a>端口复用</h3>
+<p>目前 frps 中的 <code>vhost_http_port</code> 和 <code>vhost_https_port</code> 支持配置成和 <code>bind_port</code> 为同一个端口，frps 会对连接的协议进行分析，之后进行不同的处理。</p>
+<p>例如在某些限制较严格的网络环境中，可以将 <code>bind_port</code> 和 <code>vhost_https_port</code> 都设置为 443。</p>
+<p>后续会尝试允许多个 proxy 绑定同一个远端端口的不同协议。</p>
+<h3 data-link="#TCP-多路复用"><a class="target-menu hidden" href="#TCP-多路复用">#</a><a name="TCP-多路复用"></a>TCP 多路复用</h3>
+<p>从 v0.10.0 版本开始，客户端和服务器端之间的连接支持多路复用，不再需要为每一个用户请求创建一个连接，使连接建立的延迟降低，并且避免了大量文件描述符的占用，使 frp 可以承载更高的并发数。</p>
+<p>该功能默认启用，如需关闭，可以在 frps.ini 和 frpc.ini 中配置，该配置项在服务端和客户端必须一致：</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frps.ini 和 frpc.ini 中</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">tcp_mux</span> = <span class="hljs-literal">false</span>
+</code></pre>
+<h3 data-link="#底层通信可选-kcp-协议"><a class="target-menu hidden" href="#底层通信可选-kcp-协议">#</a><a name="底层通信可选-kcp-协议"></a>底层通信可选 kcp 协议</h3>
+<p>底层通信协议支持选择 kcp 协议，在弱网环境下传输效率提升明显，但是会有一些额外的流量消耗。</p>
+<p>开启 kcp 协议支持：</p>
+<ol>
+<li>在 frps.ini 中启用 kcp 协议支持，指定一个 udp 端口用于接收客户端请求：</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frps.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">bind_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-comment"># kcp 绑定的是 udp 端口，可以和 bind_port 一样</span>
+<span class="hljs-attr">kcp_bind_port</span> = <span class="hljs-number">7000</span>
+</code></pre>
+<ol start="2">
+<li>在 frpc.ini 指定需要使用的协议类型，目前只支持 tcp 和 kcp。其他代理配置不需要变更：</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">server_addr</span> = x.x.x.x
+<span class="hljs-comment"># server_port 指定为 frps 的 kcp_bind_port</span>
+<span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-attr">protocol</span> = kcp
+</code></pre>
+<ol start="3">
+<li>像之前一样使用 frp，需要注意开放相关机器上的 udp 的端口的访问权限。</li>
+</ol>
+<h3 data-link="#连接池"><a class="target-menu hidden" href="#连接池">#</a><a name="连接池"></a>连接池</h3>
+<p>默认情况下，当用户请求建立连接后，frps 才会请求 frpc 主动与后端服务建立一个连接。当为指定的代理启用连接池后，frp 会预先和后端服务建立起指定数量的连接，每次接收到用户请求后，会从连接池中取出一个连接和用户连接关联起来，避免了等待与后端服务建立连接以及 frpc 和 frps 之间传递控制信息的时间。</p>
+<p>这一功能比较适合有大量短连接请求时开启。</p>
+<ol>
+<li>首先可以在 frps.ini 中设置每个代理可以创建的连接池上限，避免大量资源占用，客户端设置超过此配置后会被调整到当前值：</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frps.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">max_pool_count</span> = <span class="hljs-number">5</span>
+</code></pre>
+<ol start="2">
+<li>在 frpc.ini 中为客户端启用连接池，指定预创建连接的数量：</li>
+</ol>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">pool_count</span> = <span class="hljs-number">1</span>
+</code></pre>
+<h3 data-link="#负载均衡"><a class="target-menu hidden" href="#负载均衡">#</a><a name="负载均衡"></a>负载均衡</h3>
+<p>可以将多个相同类型的 proxy 加入到同一个 group 中，从而实现负载均衡的功能。</p>
+<p>目前只支持 TCP 和 HTTP 类型的 proxy。</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[test1]</span>
+<span class="hljs-attr">type</span> = tcp
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">8080</span>
+<span class="hljs-attr">remote_port</span> = <span class="hljs-number">80</span>
+<span class="hljs-attr">group</span> = web
+<span class="hljs-attr">group_key</span> = <span class="hljs-number">123</span>
+<span class="hljs-section">
+[test2]</span>
+<span class="hljs-attr">type</span> = tcp
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">8081</span>
+<span class="hljs-attr">remote_port</span> = <span class="hljs-number">80</span>
+<span class="hljs-attr">group</span> = web
+<span class="hljs-attr">group_key</span> = <span class="hljs-number">123</span>
+</code></pre>
+<p>用户连接 frps 服务器的 80 端口，frps 会将接收到的用户连接随机分发给其中一个存活的 proxy。这样可以在一台 frpc 机器挂掉后仍然有其他节点能够提供服务。</p>
+<p>TCP 类型代理要求 <code>group_key</code> 相同，做权限验证，且 <code>remote_port</code> 相同。</p>
+<p>HTTP 类型代理要求 <code>group_key, custom_domains 或 subdomain 和 locations</code> 相同。</p>
+<h3 data-link="#健康检查"><a class="target-menu hidden" href="#健康检查">#</a><a name="健康检查"></a>健康检查</h3>
+<p>通过给 proxy 加上健康检查的功能，可以在要反向代理的服务出现故障时，将这个服务从 frps 中摘除，搭配负载均衡的功能，可以用来实现高可用的架构，避免服务单点故障。</p>
+<p>在每一个 proxy 的配置下加上 <code>health_check_type = {type}</code> 来启用健康检查功能。</p>
+<p><strong>type</strong> 目前可选 tcp 和 http。</p>
+<p>tcp 只要能够建立连接则认为服务正常，http 会发送一个 http 请求，服务需要返回 2xx 的状态码才会被认为正常。</p>
+<p>tcp 示例配置如下：</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[test1]</span>
+<span class="hljs-attr">type</span> = tcp
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">22</span>
+<span class="hljs-attr">remote_port</span> = <span class="hljs-number">6000</span>
+<span class="hljs-comment"># 启用健康检查，类型为 tcp</span>
+<span class="hljs-attr">health_check_type</span> = tcp
+<span class="hljs-comment"># 建立连接超时时间为 3 秒</span>
+<span class="hljs-attr">health_check_timeout_s</span> = <span class="hljs-number">3</span>
+<span class="hljs-comment"># 连续 3 次检查失败，此 proxy 会被摘除</span>
+<span class="hljs-attr">health_check_max_failed</span> = <span class="hljs-number">3</span>
+<span class="hljs-comment"># 每隔 10 秒进行一次健康检查</span>
+<span class="hljs-attr">health_check_interval_s</span> = <span class="hljs-number">10</span>
+</code></pre>
+<p>http 示例配置如下：</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[web]</span>
+<span class="hljs-attr">type</span> = http
+<span class="hljs-attr">local_ip</span> = <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">80</span>
+<span class="hljs-attr">custom_domains</span> = test.yourdomain.com
+<span class="hljs-comment"># 启用健康检查，类型为 http</span>
+<span class="hljs-attr">health_check_type</span> = http
+<span class="hljs-comment"># 健康检查发送 http 请求的 url，后端服务需要返回 2xx 的 http 状态码</span>
+<span class="hljs-attr">health_check_url</span> = /status
+<span class="hljs-attr">health_check_interval_s</span> = <span class="hljs-number">10</span>
+<span class="hljs-attr">health_check_max_failed</span> = <span class="hljs-number">3</span>
+<span class="hljs-attr">health_check_timeout_s</span> = <span class="hljs-number">3</span>
+</code></pre>
+<h3 data-link="#修改-Host-Header"><a class="target-menu hidden" href="#修改-Host-Header">#</a><a name="修改-Host-Header"></a>修改 Host Header</h3>
+<p>通常情况下 frp 不会修改转发的任何数据。但有一些后端服务会根据 http 请求 header 中的 host 字段来展现不同的网站，例如 nginx 的虚拟主机服务，启用 host-header 的修改功能可以动态修改 http 请求中的 host 字段。该功能仅限于 http 类型的代理。</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[web]</span>
+<span class="hljs-attr">type</span> = http
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">80</span>
+<span class="hljs-attr">custom_domains</span> = test.yourdomain.com
+<span class="hljs-attr">host_header_rewrite</span> = dev.yourdomain.com
+</code></pre>
+<p>原来 http 请求中的 host 字段 <code>test.yourdomain.com</code> 转发到后端服务时会被替换为 <code>dev.yourdomain.com</code>。</p>
+<h3 data-link="#设置-HTTP-请求的-header"><a class="target-menu hidden" href="#设置-HTTP-请求的-header">#</a><a name="设置-HTTP-请求的-header"></a>设置 HTTP 请求的 header</h3>
+<p>对于 <code>type = http</code> 的代理，可以设置在转发中动态添加的 header 参数。</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[web]</span>
+<span class="hljs-attr">type</span> = http
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">80</span>
+<span class="hljs-attr">custom_domains</span> = test.yourdomain.com
+<span class="hljs-attr">host_header_rewrite</span> = dev.yourdomain.com
+<span class="hljs-attr">header_X-From-Where</span> = frp
+</code></pre>
+<p>对于参数配置中所有以 <code>header_</code> 开头的参数(支持同时配置多个)，都会被添加到 http 请求的 header 中，根据如上的配置，会在请求的 header 中加上 <code>X-From-Where: frp</code>。</p>
+<h3 data-link="#获取用户真实-IP"><a class="target-menu hidden" href="#获取用户真实-IP">#</a><a name="获取用户真实-IP"></a>获取用户真实 IP</h3>
+<h4 data-link="#HTTP-X-Forwarded-For"><a class="target-menu hidden" href="#HTTP-X-Forwarded-For">#</a><a name="HTTP-X-Forwarded-For"></a>HTTP X-Forwarded-For</h4>
+<p>目前只有 <strong>http</strong> 类型的代理支持这一功能，可以通过用户请求的 header 中的 <code>X-Forwarded-For</code> 来获取用户真实 IP，默认启用。</p>
+<h4 data-link="#Proxy-Protocol"><a class="target-menu hidden" href="#Proxy-Protocol">#</a><a name="Proxy-Protocol"></a>Proxy Protocol</h4>
+<p>frp 支持通过 <strong>Proxy Protocol</strong> 协议来传递经过 frp 代理的请求的真实 IP，此功能支持所有以 TCP 为底层协议的类型，不支持 UDP。</p>
+<p><strong>Proxy Protocol</strong> 功能启用后，frpc 在和本地服务建立连接后，会先发送一段 <strong>Proxy Protocol</strong> 的协议内容给本地服务，本地服务通过解析这一内容可以获得访问用户的真实 IP。所以不仅仅是 HTTP 服务，任何的 TCP 服务，只要支持这一协议，都可以获得用户的真实 IP 地址。</p>
+<p>需要注意的是，在代理配置中如果要启用此功能，需要本地的服务能够支持 <strong>Proxy Protocol</strong> 这一协议，目前 nginx 和 haproxy 都能够很好的支持。</p>
+<p>这里以 https 类型为例:</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[web]</span>
+<span class="hljs-attr">type</span> = https
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">443</span>
+<span class="hljs-attr">custom_domains</span> = test.yourdomain.com
+
+<span class="hljs-comment"># 目前支持 v1 和 v2 两个版本的 proxy protocol 协议。</span>
+<span class="hljs-attr">proxy_protocol_version</span> = v2
+</code></pre>
+<p>只需要在代理配置中增加一行 <code>proxy_protocol_version = v2</code> 即可开启此功能。</p>
+<p>本地的 https 服务可以通过在 nginx 的配置中启用 <strong>Proxy Protocol</strong> 的解析并将结果设置在 <code>X-Real-IP</code> 这个 Header 中就可以在自己的 Web 服务中通过 <code>X-Real-IP</code> 获取到用户的真实 IP。</p>
+<h3 data-link="#通过密码保护你的-web-服务"><a class="target-menu hidden" href="#通过密码保护你的-web-服务">#</a><a name="通过密码保护你的-web-服务"></a>通过密码保护你的 web 服务</h3>
+<p>由于所有客户端共用一个 frps 的 http 服务端口，任何知道你的域名和 url 的人都能访问到你部署在内网的 web 服务，但是在某些场景下需要确保只有限定的用户才能访问。</p>
+<p>frp 支持通过 HTTP Basic Auth 来保护你的 web 服务，使用户需要通过用户名和密码才能访问到你的服务。</p>
+<p>该功能目前仅限于 http 类型的代理，需要在 frpc 的代理配置中添加用户名和密码的设置。</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[web]</span>
+<span class="hljs-attr">type</span> = http
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">80</span>
+<span class="hljs-attr">custom_domains</span> = test.yourdomain.com
+<span class="hljs-attr">http_user</span> = abc
+<span class="hljs-attr">http_pwd</span> = abc
+</code></pre>
+<p>通过浏览器访问 <code>http://test.yourdomain.com</code>，需要输入配置的用户名和密码才能访问。</p>
+<h3 data-link="#自定义二级域名"><a class="target-menu hidden" href="#自定义二级域名">#</a><a name="自定义二级域名"></a>自定义二级域名</h3>
+<p>在多人同时使用一个 frps 时，通过自定义二级域名的方式来使用会更加方便。</p>
+<p>通过在 frps 的配置文件中配置 <code>subdomain_host</code>，就可以启用该特性。之后在 frpc 的 http、https 类型的代理中可以不配置 <code>custom_domains</code>，而是配置一个 <code>subdomain</code> 参数。</p>
+<p>只需要将 <code>*.{subdomain_host}</code> 解析到 frps 所在服务器。之后用户可以通过 <code>subdomain</code> 自行指定自己的 web 服务所需要使用的二级域名，通过 <code>{subdomain}.{subdomain_host}</code> 来访问自己的 web 服务。</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frps.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">subdomain_host</span> = frps.com
+</code></pre>
+<p>将泛域名 <code>*.frps.com</code> 解析到 frps 所在服务器的 IP 地址。</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[web]</span>
+<span class="hljs-attr">type</span> = http
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">80</span>
+<span class="hljs-attr">subdomain</span> = test
+</code></pre>
+<p>frps 和 frpc 都启动成功后，通过 <code>test.frps.com</code> 就可以访问到内网的 web 服务。</p>
+<p><strong>注：如果 frps 配置了 <code>subdomain_host</code>，则 <code>custom_domains</code> 中不能是属于 <code>subdomain_host</code> 的子域名或者泛域名。</strong></p>
+<p>同一个 http 或 https 类型的代理中 <code>custom_domains</code>  和 <code>subdomain</code> 可以同时配置。</p>
+<h3 data-link="#URL-路由"><a class="target-menu hidden" href="#URL-路由">#</a><a name="URL-路由"></a>URL 路由</h3>
+<p>frp 支持根据请求的 URL 路径路由转发到不同的后端服务。</p>
+<p>通过配置文件中的 <code>locations</code> 字段指定一个或多个 proxy 能够匹配的 URL 前缀(目前仅支持最大前缀匹配，之后会考虑正则匹配)。例如指定 <code>locations = /news</code>，则所有 URL 以 <code>/news</code> 开头的请求都会被转发到这个服务。</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[web01]</span>
+<span class="hljs-attr">type</span> = http
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">80</span>
+<span class="hljs-attr">custom_domains</span> = web.yourdomain.com
+<span class="hljs-attr">locations</span> = /
+<span class="hljs-section">
+[web02]</span>
+<span class="hljs-attr">type</span> = http
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">81</span>
+<span class="hljs-attr">custom_domains</span> = web.yourdomain.com
+<span class="hljs-attr">locations</span> = /news,/about
+</code></pre>
+<p>按照上述的示例配置后，<code>web.yourdomain.com</code> 这个域名下所有以 <code>/news</code> 以及 <code>/about</code> 作为前缀的 URL 请求都会被转发到 web02，其余的请求会被转发到 web01。</p>
+<h3 data-link="#通过代理连接-frps"><a class="target-menu hidden" href="#通过代理连接-frps">#</a><a name="通过代理连接-frps"></a>通过代理连接 frps</h3>
+<p>在只能通过代理访问外网的环境内，frpc 支持通过 HTTP PROXY 和 frps 进行通信。</p>
+<p>可以通过设置 <code>HTTP_PROXY</code> 系统环境变量或者通过在 frpc 的配置文件中设置 <code>http_proxy</code> 参数来使用此功能。</p>
+<p>仅在 <code>protocol = tcp</code> 时生效。</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[common]</span>
+<span class="hljs-attr">server_addr</span> = x.x.x.x
+<span class="hljs-attr">server_port</span> = <span class="hljs-number">7000</span>
+<span class="hljs-attr">http_proxy</span> = http://user:pwd@<span class="hljs-number">192.168</span>.<span class="hljs-number">1.128</span>:<span class="hljs-number">8080</span>
+</code></pre>
+<h3 data-link="#范围端口映射"><a class="target-menu hidden" href="#范围端口映射">#</a><a name="范围端口映射"></a>范围端口映射</h3>
+<p>在 frpc 的配置文件中可以指定映射多个端口，目前只支持 tcp 和 udp 的类型。</p>
+<p>这一功能通过 <code>range:</code> 段落标记来实现，客户端会解析这个标记中的配置，将其拆分成多个 proxy，每一个 proxy 以数字为后缀命名。</p>
+<p>例如要映射本地 6000-6005, 6007 这6个端口，主要配置如下：</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[range:test_tcp]</span>
+<span class="hljs-attr">type</span> = tcp
+<span class="hljs-attr">local_ip</span> = <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>
+<span class="hljs-attr">local_port</span> = <span class="hljs-number">6000</span>-<span class="hljs-number">6006</span>,<span class="hljs-number">6007</span>
+<span class="hljs-attr">remote_port</span> = <span class="hljs-number">6000</span>-<span class="hljs-number">6006</span>,<span class="hljs-number">6007</span>
+</code></pre>
+<p>实际连接成功后会创建 8 个 proxy，命名为 <code>test_tcp_0, test_tcp_1 ... test_tcp_7</code>。</p>
+<h3 data-link="#插件"><a class="target-menu hidden" href="#插件">#</a><a name="插件"></a>插件</h3>
+<p>默认情况下，frpc 只会转发请求到本地 tcp 或 udp 端口。</p>
+<p>插件模式是为了在客户端提供更加丰富的功能，目前内置的插件有 <code>unix_domain_socket</code>、<code>http_proxy</code>、<code>socks5</code>、<code>static_file</code>。具体使用方式请查看<a href="#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B" target="_blank">使用示例</a>。</p>
+<p>通过 <code>plugin</code> 指定需要使用的插件，插件的配置参数都以 <code>plugin_</code> 开头。使用插件后 <code>local_ip</code> 和 <code>local_port</code> 不再需要配置。</p>
+<p>使用 <strong>http_proxy</strong> 插件的示例:</p>
+<pre><code class="language-ini hljs"><span class="hljs-comment"># frpc.ini</span>
+<span class="hljs-section">[http_proxy]</span>
+<span class="hljs-attr">type</span> = tcp
+<span class="hljs-attr">remote_port</span> = <span class="hljs-number">6000</span>
+<span class="hljs-attr">plugin</span> = http_proxy
+<span class="hljs-attr">plugin_http_user</span> = abc
+<span class="hljs-attr">plugin_http_passwd</span> = abc
+</code></pre>
+<p><code>plugin_http_user</code> 和 <code>plugin_http_passwd</code> 即为 <code>http_proxy</code> 插件可选的配置参数。</p>
+
+</body>
+<html>
+
