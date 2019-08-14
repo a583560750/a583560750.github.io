@@ -78,7 +78,7 @@ body{background-image:url(images/bg.jpg);z-index: -1;background-repeat:no-repeat
 <div class="visible-xs">
 <div class="jumbotron">
 <p id="zhongjian">输入关键词，再点击下方相应按钮，即可检索，默认为百度搜索！<br>随时随地 记住一个就够了！<br>推荐使用电脑访问，效果更好！<br></p>
-<p align="center"><a class="btn btn-success btn-md" href="tencent://message/?uin=512154224&Site=&Menu=yes" role="button">留言&建议</a></p>
+<p align="center"><a class="btn btn-success btn-md" href="http://www.liangshitian.top/?post=31" role="button">留言&建议</a></p>
 </div>
 </div>
 <br>
@@ -109,94 +109,94 @@ body{background-image:url(images/bg.jpg);z-index: -1;background-repeat:no-repeat
 <tr style="background: rgba(45, 43, 43, 0.43);" >
 <td align="center" id="fenlei" >常用</td>
 <td align="center"><a href="http://www.liangshitian.top/" target="_blank" id="lianjie1">四天博客</a></td>
-<td align="center"><a href="http://bbs.fishc.com/forum.php" target="_blank"id="lianjie">鱼C论坛</a></td>
-<td align="center"><a href="http://3g.lexun.com/" target="_blank" id="lianjie">乐讯社区</a></td>
-<td align="center"><a href="https://translate.google.cn/" target="_blank" id="lianjie">谷歌翻译</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://bbs.fishc.com/forum.php" target="_blank"id="lianjie">鱼C论坛</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://3g.lexun.com/" target="_blank" id="lianjie">乐讯社区</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://translate.google.cn/" target="_blank" id="lianjie">谷歌翻译</a></td>
 
 <td align="center" id="fenlei">图床</td>
-<td align="center"><a href="https://img9.top/" target="_blank" id="lianjie">无限图床</a></td>
-<td align="center"><a href="http://upload.otar.im/" target="_blank" id="lianjie">Otar图床</a></td>
-<td align="center"><a href="http://www.liangshitian.top/smtc/" target="_blank" id="lianjie">SM.MS</a></td>
-<td align="center"><a href="https://www.picb.cc/" target="_blank" id="lianjie">Picb</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://img9.top/" target="_blank" id="lianjie">无限图床</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://upload.otar.im/" target="_blank" id="lianjie">Otar图床</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.liangshitian.top/smtc/" target="_blank" id="lianjie">SM.MS</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://www.picb.cc/" target="_blank" id="lianjie">Picb</a></td>
 </tr>
 </tbody>
 <tbody>
 <tr style="background: rgba(45, 43, 43, 0.43);" >
 <td align="center" id="fenlei">视频</td>
-<td align="center"><a href="http://www.youku.com/" target="_blank" id="lianjie">优酷视频</a></td>
-<td align="center"><a href="http://www.iqiyi.com/" target="_blank"id="lianjie">爱奇艺</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.youku.com/" target="_blank" id="lianjie">优酷视频</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.iqiyi.com/" target="_blank"id="lianjie">爱奇艺</a></td>
 <td align="center"><a href="http://www.liangshitian.top/tools/tv/" target="_blank"id="lianjie">电视直播</a></td>
-<td align="center"><a href="https://v.qq.com/" target="_blank" id="lianjie">腾讯视频</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://v.qq.com/" target="_blank" id="lianjie">腾讯视频</a></td>
 
 <td align="center" id="fenlei">邮箱</td>
-<td align="center"><a href="http://email.163.com/" target="_blank" id="lianjie">网易邮箱</a></td>
-<td align="center"><a href="http://mail.10086.cn/" target="_blank" id="lianjie">1 3 9邮箱</a></td>
-<td align="center"><a href="https://www.263.net/" target="_blank" id="lianjie">2 6 3邮箱</a></td>
-<td align="center"><a href="https://mail.qq.com" target="_blank" id="lianjie">Q Q邮箱</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://email.163.com/" target="_blank" id="lianjie">网易邮箱</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://mail.10086.cn/" target="_blank" id="lianjie">1 3 9邮箱</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://www.263.net/" target="_blank" id="lianjie">2 6 3邮箱</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://mail.qq.com" target="_blank" id="lianjie">Q Q邮箱</a></td>
 </tr>
 </tbody>
 <tbody>
 <tr style="background: rgba(45, 43, 43, 0.43);" >
 <td align="center" id="fenlei">社交</td>
-<td align="center"><a href="http://weibo.com/" target="_blank" id="lianjie">新浪微博</a></td>
-<td align="center"><a href="http://www.tianya.cn/" target="_blank" id="lianjie">天涯社区</a></td>
-<td align="center"><a href="http://tieba.baidu.com/" target="_blank" id="lianjie">百度贴吧</a></td>
-<td align="center"><a href="https://www.zhihu.com/" target="_blank" id="lianjie">知乎网</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://weibo.com/" target="_blank" id="lianjie">新浪微博</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.tianya.cn/" target="_blank" id="lianjie">天涯社区</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://tieba.baidu.com/" target="_blank" id="lianjie">百度贴吧</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://www.zhihu.com/" target="_blank" id="lianjie">知乎网</a></td>
 
 <td align="center" id="fenlei">求职</td>
 
-<td align="center"><a href="http://www.51job.com/" target="_blank" id="lianjie">前程无忧</a></td>
-<td align="center"><a href="http://www.lagou.com/" target="_blank" id="lianjie">拉勾网</a></td>
-<td align="center"><a href="http://zhaopin.com" target="_blank" id="lianjie">智联招聘</a></td>
-<td align="center"><a href="https://c.liepin.com/" target="_blank" id="lianjie">猎聘网</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.51job.com/" target="_blank" id="lianjie">前程无忧</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.lagou.com/" target="_blank" id="lianjie">拉勾网</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://zhaopin.com" target="_blank" id="lianjie">智联招聘</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://c.liepin.com/" target="_blank" id="lianjie">猎聘网</a></td>
 </tr>
 </tbody>
 	
 <tbody>
 <tr style="background: rgba(45, 43, 43, 0.43);" >
 <td align="center" id="fenlei">购物</td>
-<td align="center"><a href="http://www.jd.com/" target="_blank" id="lianjie">京东商城</a></td>
-<td align="center"><a href="https://www.taobao.com/" target="_blank" id="lianjie">淘宝购物</a></td>
-<td align="center"><a href="https://www.mi.com/" target="_blank" id="lianjie">小米商城</a></td>
-<td align="center"><a href="https://www.amazon.cn/" target="_blank" id="lianjie">亚马逊网</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.jd.com/" target="_blank" id="lianjie">京东商城</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://www.taobao.com/" target="_blank" id="lianjie">淘宝购物</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://www.mi.com/" target="_blank" id="lianjie">小米商城</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://www.amazon.cn/" target="_blank" id="lianjie">亚马逊网</a></td>
 
 <td align="center" id="fenlei">音乐</td>
-<td align="center"><a href="http://music.163.com/" target="_blank" id="lianjie1">网易音乐</a></td>
-<td align="center"><a href="http://www.yinyuetai.com/" target="_blank" id="lianjie">音悦台</a></td>
-<td align="center"><a href="http://www.xiami.com/" target="_blank" id="lianjie">虾米音乐</a></td>
-<td align="center"><a href="http://www.kuwo.cn/" target="_blank" id="lianjie">酷狗音乐</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://music.163.com/" target="_blank" id="lianjie1">网易音乐</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.yinyuetai.com/" target="_blank" id="lianjie">音悦台</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.xiami.com/" target="_blank" id="lianjie">虾米音乐</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.kuwo.cn/" target="_blank" id="lianjie">酷狗音乐</a></td>
 </tr>
 </tbody>
 	
 <tbody>
 <tr style="background: rgba(45, 43, 43, 0.43);" >
 <td align="center" id="fenlei">网盘</td>
-<td align="center"><a href="https://pan.baidu.com/" target="_blank"id="lianjie">百度云盘</a></td>
-<td align="center"><a href="https://www.weiyun.com/" target="_blank" id="lianjie">微云云盘</a></td>
-<td align="center"><a href="https://www.jianguoyun.com/" target="_blank"id="lianjie">坚果云盘</a></td>
-<td align="center"><a href="https://teracloud.jp/ja/" target="_blank" id="lianjie">国外网盘</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://pan.baidu.com/" target="_blank"id="lianjie">百度云盘</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://www.weiyun.com/" target="_blank" id="lianjie">微云云盘</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://www.jianguoyun.com/" target="_blank"id="lianjie">坚果云盘</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://teracloud.jp/ja/" target="_blank" id="lianjie">国外网盘</a></td>
 
 <td align="center" id="fenlei">设计</td>
-<td align="center"><a href="http://www.easyicon.net/" target="_blank" id="lianjie">易图标</a></td>
-<td align="center"><a href="http://www.iconfont.cn/" target="_blank" id="lianjie">矢量图标</a></td>
-<td align="center"><a href="http://www.yeahzan.com/fa/facss.html" target="_blank" id="lianjie">F A图标</a></td>
-<td align="center"><a href="http://588ku.com/?h=bd" target="_blank" id="lianjie">千库网</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.easyicon.net/" target="_blank" id="lianjie">易图标</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.iconfont.cn/" target="_blank" id="lianjie">矢量图标</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.yeahzan.com/fa/facss.html" target="_blank" id="lianjie">F A图标</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://588ku.com/?h=bd" target="_blank" id="lianjie">千库网</a></td>
 </tr>
 </tbody>
 
 <tbody>
 <tr style="background: rgba(45, 43, 43, 0.43);" >
 <td align="center" id="fenlei">资讯</td>
-<td align="center"><a href="https://www.btime.com/" target="_blank" id="lianjie">北京时间</a></td>
-<td align="center"><a href="http://news.163.com/" target="_blank"id="lianjie">网易新闻</a></td>
-<td align="center"><a href="http://news.qq.com/" target="_blank" id="lianjie">腾讯新闻</a></td>
-<td align="center"><a href="http://sh.qihoo.com/" target="_blank"id="lianjie">好搜新闻</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://www.btime.com/" target="_blank" id="lianjie">北京时间</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://news.163.com/" target="_blank"id="lianjie">网易新闻</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://news.qq.com/" target="_blank" id="lianjie">腾讯新闻</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://sh.qihoo.com/" target="_blank"id="lianjie">好搜新闻</a></td>
 
 <td align="center" id="fenlei">源码</td>
-<td align="center"><a href="http://www.mycodes.net/" target="_blank" id="lianjie">源码之家</a></td>
-<td align="center"><a href="http://www.jb51.net/" target="_blank" id="lianjie">脚本之家</a></td>
-<td align="center"><a href="http://www.codeceo.com/" target="_blank" id="lianjie">码农网</a></td>
-<td align="center"><a href="http://www.suibianlu.com/" target="_blank" id="lianjie">精品源码</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.mycodes.net/" target="_blank" id="lianjie">源码之家</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.jb51.net/" target="_blank" id="lianjie">脚本之家</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.codeceo.com/" target="_blank" id="lianjie">码农网</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.suibianlu.com/" target="_blank" id="lianjie">精品源码</a></td>
 </tr>
 </tbody>
 
@@ -204,9 +204,9 @@ body{background-image:url(images/bg.jpg);z-index: -1;background-repeat:no-repeat
 <tr style="background: rgba(45, 43, 43, 0.43);" >
 <td align="center" id="fenlei">推荐</td>
 <td align="center"><a href="http://www.liangshitian.top/tools/music/" target="_blank" id="lianjie1">音乐搜索</a></td>
-<td align="center"><a href="http://tool.chinaz.com/map.aspx" target="_blank" id="lianjie">站长工具</a></td>
-<td align="center"><a href="http://www.ft12.com/" target="_blank" id="lianjie">短网址</a></td>
-<td align="center"><a href="http://wowenda.com/" target="_blank" id="lianjie">云盘搜索</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://tool.chinaz.com/map.aspx" target="_blank" id="lianjie">站长工具</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.ft12.com/" target="_blank" id="lianjie">短网址</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://wowenda.com/" target="_blank" id="lianjie">云盘搜索</a></td>
 <td align="center" id="fenlei">工具</td>
 
 <td align="center"><a href="http://www.liangshitian.top/tools/passwd/" target="_blank" id="lianjie">密码生成</a></td>
@@ -226,51 +226,51 @@ body{background-image:url(images/bg.jpg);z-index: -1;background-repeat:no-repeat
 	
 <tr class="active">
 <th rowspan="1" id="zuoce">论坛相关</th>
-<td align="center"><a href="http://bbs.mydigit.cn/" target="_blank" id="lianjie">数码之家</a></td>
-<td align="center"><a href="http://www.miui.com/index.html" target="_blank"id="lianjie">MIUI论坛</a></td>
-<td align="center"><a href="http://www.bathome.net" target="_blank" id="lianjie">批处理之家</a></td>
-<td align="center"><a href="http://wuyou.net/forum.php" target="_blank"id="lianjie">无忧启动</a></td>
-<td align="center"><a href="https://bbs.125.la/" target="_blank" id="lianjie">精易论坛</a></td>
-<td align="center"><a href="http://www.gocloud.cn/bbs/forum.php" target="_blank"id="lianjie">高恪网络</a></td>
-<td align="center"><a href="http://www.right.com.cn/forum/forum.php" target="_blank"id="lianjie">恩山无线</a></td>
-<td align="center"><a href="http://bbs.pcbeta.com/" target="_blank" id="lianjie">远景论坛</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://bbs.mydigit.cn/" target="_blank" id="lianjie">数码之家</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.miui.com/index.html" target="_blank"id="lianjie">MIUI论坛</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.bathome.net" target="_blank" id="lianjie">批处理之家</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://wuyou.net/forum.php" target="_blank"id="lianjie">无忧启动</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://bbs.125.la/" target="_blank" id="lianjie">精易论坛</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.gocloud.cn/bbs/forum.php" target="_blank"id="lianjie">高恪网络</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.right.com.cn/forum/forum.php" target="_blank"id="lianjie">恩山无线</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://bbs.pcbeta.com/" target="_blank" id="lianjie">远景论坛</a></td>
 
 </tr>
 
 <tr class="success">
 <th rowspan="1" id="zuoce">学习相关</th>
-<td align="center"><a href="http://www.fishc.com/" target="_blank"id="lianjie">鱼C工作室</a></td>
-<td align="center"><a href="http://bbs.51testing.com/forum.php" target="_blank" id="lianjie">51Testing</a></td>
-<td align="center"><a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" id="lianjie">Python教程</a></td>
-<td align="center"><a href="https://www.runoob.com/" target="_blank"id="lianjie">菜鸟教程</a></td>
-<td align="center"><a href="http://www.hissummer.com/" target="_blank"id="lianjie">Jmeter教程网</a></td>
-<td align="center"><a href="http://www.testtao.com/" target="_blank"id="lianjie">测试之道</a></td>
-<td align="center"><a href="http://www.51zxw.net/" target="_blank"id="lianjie">自学网</a></td>
-<td align="center"><a href="http://edu.51cto.com/" target="_blank"id="lianjie">51CTO学院</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.fishc.com/" target="_blank"id="lianjie">鱼C工作室</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://bbs.51testing.com/forum.php" target="_blank" id="lianjie">51Testing</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" id="lianjie">Python教程</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://www.runoob.com/" target="_blank"id="lianjie">菜鸟教程</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.hissummer.com/" target="_blank"id="lianjie">Jmeter教程网</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.testtao.com/" target="_blank"id="lianjie">测试之道</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.51zxw.net/" target="_blank"id="lianjie">自学网</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://edu.51cto.com/" target="_blank"id="lianjie">51CTO学院</a></td>
 </tr>
 
 <tr class="warning">
 <th rowspan="1" id="zuoce">工具类别</th>
-<td align="center"><a href="http://www.wdku.net/" target="_blank"id="lianjie">超级转换工具</a></td>
-<td align="center"><a href="http://www.bejson.com/ui/compress_img/" target="_blank" id="lianjie">压缩图片</a></td>
-<td align="center"><a href="http://web.airdroid.com/" target="_blank"id="lianjie">Airdroid</a></td>
-<td align="center"><a href="http://www.liangshitian.top/aria2/" target="_blank"id="lianjie">AriaNg</a></td>
-<td align="center"><a href="http://www.uupoop.com/zp/" target="_blank"id="lianjie">在线PS</a></td>
-<td align="center"><a href="http://xiuxiu.web.meitu.com/" target="_blank"id="lianjie">美图秀秀</a></td>
-<td align="center"><a href="http://tools.jb51.net/" target="_blank"id="lianjie">在线工具大全</a></td>
-<td align="center"><a href="http://ocr.wdku.net/" target="_blank"id="lianjie">在线OCR</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.wdku.net/" target="_blank"id="lianjie">超级转换工具</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.bejson.com/ui/compress_img/" target="_blank" id="lianjie">压缩图片</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://web.airdroid.com/" target="_blank"id="lianjie">Airdroid</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.liangshitian.top/aria2/" target="_blank"id="lianjie">AriaNg</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.uupoop.com/zp/" target="_blank"id="lianjie">在线PS</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://xiuxiu.web.meitu.com/" target="_blank"id="lianjie">美图秀秀</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://tools.jb51.net/" target="_blank"id="lianjie">在线工具大全</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://ocr.wdku.net/" target="_blank"id="lianjie">在线OCR</a></td>
 </tr>
 
 <tr class="warning">
 <th rowspan="1" id="zuoce">其他类别</th>
-<td align="center"><a href="http://www.zdfans.com/" target="_blank" id="lianjie">软件平台</a></td>
-<td align="center"><a href="https://www.52pojie.cn/forum.php" target="_blank" id="lianjie">吾爱破解</a></td>
-<td align="center"><a href="https://pypi.org/" target="_blank"id="lianjie">PyPi库</a></td>
-<td align="center"><a href="https://bwh1.net/clientarea.php?action=products" target="_blank"id="lianjie">搬瓦工</a></td>
-<td align="center"><a href="http://msdn.itellyou.cn/" target="_blank" id="lianjie1">M S D N</a></td>
-<td align="center"><a href="https://kodcloud.com/" target="_blank" id="lianjie">可道云</a></td>
-<td align="center"><a href="http://www.coocloud.cn/" target="_blank"id="lianjie">Coo云</a></td>
-<td align="center"><a href="https://habo.qq.com/" target="_blank"id="lianjie">哈勃分析</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.zdfans.com/" target="_blank" id="lianjie">软件平台</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://www.52pojie.cn/forum.php" target="_blank" id="lianjie">吾爱破解</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://pypi.org/" target="_blank"id="lianjie">PyPi库</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://bwh1.net/clientarea.php?action=products" target="_blank"id="lianjie">搬瓦工</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://msdn.itellyou.cn/" target="_blank" id="lianjie1">M S D N</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://kodcloud.com/" target="_blank" id="lianjie">可道云</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=http://www.coocloud.cn/" target="_blank"id="lianjie">Coo云</a></td>
+<td align="center"><a href="http://www.liangshitian.top/go.php?url=https://habo.qq.com/" target="_blank"id="lianjie">哈勃分析</a></td>
 </tr>
 	
 </table>
