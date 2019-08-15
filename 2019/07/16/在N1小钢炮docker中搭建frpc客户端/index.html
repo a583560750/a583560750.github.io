@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword"  content="undefined">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        在N1小钢炮docker中搭建frpc客户端 - 四天博客
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <link href="//at.alicdn.com/t/font_1335590_gsy2em9cgz.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 四天博客 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+             <li>
+                <a href="http://www.liangshitian.top/file" target="_blank"
+                    <i class="iconfont icon-gongxiangtubiaozhuangtaileicaozuolei55"></i>
+                    <span> &nbsp;资源</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 四天博客 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        在N1小钢炮docker中搭建frpc客户端
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-07-16 16:36:33</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#内网穿透" title="内网穿透">内网穿透</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#N1" title="N1">N1</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#docker" title="docker">docker</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#frp" title="frp">frp</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content no-indent">
+        <p>1、新建镜像</p>
+<p><img class="alignnone size-medium" src="https://raw.githubusercontent.com/im201907/annex/master/20190716160950.png" width="823" height="459"></p>
+<p>&nbsp;</p>
+<p><img class="alignnone " src="https://raw.githubusercontent.com/im201907/annex/master/20190716161655.png" width="827" height="655"></p>
+<p>Wed editor中，复制以下内容进去</p>
+<p><span style="color: #ff0000;">FROM arm64v8/alpine</span></p>
+<p><span style="color: #ff0000;">WORKDIR /apps/docker/</span></p>
+<p><span style="color: #ff0000;">MAINTAINER lstcml</span></p>
+<p><span style="color: #ff0000;">ENV FRP_VERSION 0.25.0</span></p>
+<p><span style="color: #ff0000;">ENV RUN_SYSTEM linux_arm64</span></p>
+<p><span style="color: #ff0000;">RUN set -x &amp;&amp; \</span><br><span style="color: #ff0000;">wget –no-check-certificate <a href="https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_${RUN_SYSTEM}.tar.gz" target="_blank" rel="external">https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_${RUN_SYSTEM}.tar.gz</a> &amp;&amp; \</span><br><span style="color: #ff0000;">tar xzf frp_${FRP<em>VERSION}</em>${RUN<em>SYSTEM}.tar.gz &amp;&amp; \</em></span><br><span style="color: #ff0000;">cd frp${FRP<em>VERSION}</em>${RUN<em>SYSTEM} &amp;&amp; \</em></span><br><span style="color: #ff0000;">mkdir /apps/docker/frp &amp;&amp; \</span><br><span style="color: #ff0000;">mv frpc /apps/docker/frp &amp;&amp; \</span><br><span style="color: #ff0000;">mv frpc.ini /apps/docker/frp/frpc.ini &amp;&amp; \</span><br><span style="color: #ff0000;">cd .. &amp;&amp; \</span><br><span style="color: #ff0000;">rm -rf *.tar.gz &amp;&amp; \</span><br><span style="color: #ff0000;">rm -rf frp${FRP<em>VERSION}</em>${RUN_SYSTEM}</span></p>
+<p><span style="color: #ff0000;">VOLUME /apps/docker/frp</span></p>
+<p><span style="color: #ff0000;">CMD /apps/docker/frp/frpc -c /apps/docker/frp/frpc.ini</span><br>如下图提示则成功创建</p>
+<p><img class="alignnone size-medium" src="https://raw.githubusercontent.com/im201907/annex/master/20190716161950.png" width="766" height="517"></p>
+<p>2、创建容器</p>
+<p><img class="alignnone " src="https://raw.githubusercontent.com/im201907/annex/master/20190716162103.png" width="771" height="361"></p>
+<p><img class="alignnone " src="https://raw.githubusercontent.com/im201907/annex/master/20190716162400.png" width="797" height="567"></p>
+<p>name: 容器名称，可以自定义<br>Image:镜像名称，输入刚才新建的镜像名称</p>
+<p><img class="alignnone " src="https://raw.githubusercontent.com/im201907/annex/master/20190716162605.png" width="831" height="293"></p>
+<p>3、进入挂载点修改frpc.ini</p>
+<p>a.查看挂载点路径</p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190716163025.png"></p>
+<p>拉到最后，Host/volume下就是挂载点路径</p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190716163200.png"></p>
+<p>b.进入docker的volume进去该路径修改frpc.ini配置文件</p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190716163346.png"></p>
+<p>4、启动容器</p>
+<p><img class="" src="https://raw.githubusercontent.com/im201907/annex/master/20190716163537.png" width="913" height="229"></p>
+<p><strong><span style="color: #ff0000;">温馨提示：</span></strong></p>
+<p><strong><span style="color: #ff0000;">frpc.ini中的local_ip只对应当前容器的IP地址，如需映射N1的IP，则需填写N1的真实地址</span></strong></p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/1687679507">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/a512154224">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank"  href="tencent://message/?uin=512154224&Site=&Menu=yes">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-QQ"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+    </ul>
+    
+    <p>
+   <!--     <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span> -->
+        
+        Copyright &copy; 2017-至今 &nbsp;<a href="http://www.liangshitian.top"  title="四天博客">四天</a>&nbsp;&nbsp;  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

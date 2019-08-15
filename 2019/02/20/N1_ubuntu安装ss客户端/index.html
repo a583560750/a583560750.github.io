@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword"  content="undefined">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        N1_ubuntu安装ss客户端 - 四天博客
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <link href="//at.alicdn.com/t/font_1335590_gsy2em9cgz.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 四天博客 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+             <li>
+                <a href="http://www.liangshitian.top/file" target="_blank"
+                    <i class="iconfont icon-gongxiangtubiaozhuangtaileicaozuolei55"></i>
+                    <span> &nbsp;资源</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 四天博客 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        N1_ubuntu安装ss客户端
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-02-20 15:11:30</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#N1" title="N1">N1</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#斐讯" title="斐讯">斐讯</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#NAS" title="NAS">NAS</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#SS" title="SS">SS</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#代理" title="代理">代理</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content no-indent">
+        <p>armbian版本：ARMBIAN 5.44 user-built Ubuntu 18.04.2 LTS 3.14.29  </p>
+<p>一、安装SS客户端<br>1、安装pip  </p>
+<pre><code class="language-css">apt install python-gevent python-pip</code></pre>
+
+<p>2、安装ss  </p>
+<pre><code class="language-css">pip install shadowsocks</code></pre>
+
+<p>3、生成配置文件   </p>
+<pre><code class="language-css">vi /etc/shadowsocks.json
+
+{  
+"server":"your_server_ip", #ss服务器IP
+
+"server_port":your_server_port, #端口
+
+"local_address": "127.0.0.1", #本地ip
+
+"local_port":1080, #本地端口
+
+"password":"your_server_passwd", #连接ss密码
+
+"timeout":300, #等待超时
+
+"method":"rc4-md5", #加密方式
+
+"fast_open": false,
+
+  # true 或 false。如果你的服务器 Linux 内核在3.7+，可以开启 fast_open 以降低延迟。开启方法： echo 3 > /proc/sys/net/ipv4/tcp_fastopen 开启之后，将 fast_open 的配置设置为 true 即可
+
+"workers": 1 # 工作线程数  
+}</code></pre>
+
+<p>4、后台运行  </p>
+<pre><code class="language-css">nohup sslocal -c /etc/shadowsocks.json /dev/null 2>&1 & </code></pre>
+
+<p>5、验证Shadowsocks客户端服务是否正常运行  </p>
+<pre><code class="language-css">curl --socks5 127.0.0.1:1080 http://httpbin.org/ip</code></pre>
+出现SS服务器IP地址即运行正常
+
+二、设置代理  
+
+1、安装privox  
+<pre><code class="language-css">apt-get install privoxy -y</code></pre> 
+启动privoxy服务  
+<pre><code class="language-css">systemctl enable privoxy  
+systemctl start privoxy  
+systemctl status privoxy</code></pre>
+
+<p>2、配置privoxy</p>
+<pre><code class="language-css">vi /etc/privoxy/config 添加socks5代理，如下:
+
+listen-address 127.0.0.1:8118 # 8118 是默认端口，不用改  
+forward-socks5t / 127.0.0.1:1080 . #转发到本地端口，注意最后有个点</code></pre>
+
+<p>3、设置http、https代理</p>
+<pre><code class="language-css">vi /etc/profile 在最后添加如下信息  
+PROXY_HOST=127.0.0.1  
+export all_proxy=http://$PROXY_HOST:8118  
+export ftp_proxy=http://$PROXY_HOST:8118  
+export http_proxy=http://$PROXY_HOST:8118  
+export https_proxy=http://$PROXY_HOST:8118  
+export no_proxy=localhost,172.16.0.0/16,192.168.0.0/16.,127.0.0.1,10.10.0.0/16</code></pre>
+重载环境变量  
+<pre><code class="language-css"> source /etc/profile</code></pre>
+
+<p>遇到的坑：<br>1、pip安装ss报错解决  </p>
+<pre><code class="language-css">vi /usr/bin/pip  
+解决方案：  
+原：from pip import main   
+修改后：from pip._internal import main</code></pre>
+
+<p>2、SS报错1  </p>
+<pre><code class="language-css">AttributeError: /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1: undefined symbol  
+解决方案：  
+
+修改/usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py  
+
+libcrypto.EVP_CIPHER_CTX_cleanup.argtypes = (c_void_p,)  
+替换成  
+libcrypto.EVP_CIPHER_CTX_reset.argtypes = (c_void_p,)  
+
+libcrypto.EVP_CIPHER_CTX_cleanup  
+替换成  
+libcrypto.EVP_CIPHER_CTX_reset</code></pre>
+
+<p>3、SS报错2<br><img src="https://raw.githubusercontent.com/a512154224/a512154224.github.io/master/picture/1004489021.jpg" alt=""></p>
+<p>解决方案：  </p>
+<pre><code class="language-css">vi /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py  
+
+libcrypto.EVP_CIPHER_CTX_cleanup.argtypes = (c_void_p,)   
+改成：  
+libcrypto.EVP_CIPHER_CTX_reset.argtypes = (c_void_p,)  
+
+libcrypto.EVP_CIPHER_CTX_cleanup(self._ctx)   
+改成：  
+libcrypto.EVP_CIPHER_CTX_reset(self._ctx)
+
+取消代理命令  
+while read var; do unset $var; done < <(env |="" grep="" -i="" proxy="" awk="" -f="{print $1}" )<="" code=""></(env></code></pre>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/1687679507">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/a512154224">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank"  href="tencent://message/?uin=512154224&Site=&Menu=yes">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-QQ"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+    </ul>
+    
+    <p>
+   <!--     <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span> -->
+        
+        Copyright &copy; 2017-至今 &nbsp;<a href="http://www.liangshitian.top"  title="四天博客">四天</a>&nbsp;&nbsp;  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

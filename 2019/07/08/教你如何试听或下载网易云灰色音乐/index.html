@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword"  content="undefined">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        教你如何试听或下载网易云灰色音乐 - 四天博客
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <link href="//at.alicdn.com/t/font_1335590_gsy2em9cgz.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 四天博客 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+             <li>
+                <a href="http://www.liangshitian.top/file" target="_blank"
+                    <i class="iconfont icon-gongxiangtubiaozhuangtaileicaozuolei55"></i>
+                    <span> &nbsp;资源</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 四天博客 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        教你如何试听或下载网易云灰色音乐
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-07-08 12:01:03</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#音乐" title="音乐">音乐</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#网易云" title="网易云">网易云</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content no-indent">
+        <p>致敬伟大的作者<a href="https://github.com/nondanee" target="_blank" rel="noopener">nondanee</a></p>
+<p>原理很简单，其实就是用网易云旧链或其他音乐平台的链接去替换，教程如下：</p>
+<p>1、下载源码：<a href="https://github.com/nondanee/UnblockNeteaseMusic" target="_blank" rel="noopener">UnblockNeteaseMusic</a><br>解压zip文件，建议放到 C 盘的目录，不要放到平时安装程序的目录，以免CMD没权限进去导致使用失败。如（C:\UnblockNeteaseMusic-master）</p>
+<p>2、安装 Node.js</p>
+<p>去<a href="https://nodejs.org/en/" target="_blank" rel="noopener">官网</a>下载Node.js安装过程中记得勾选Add to Path</p>
+<p><img class="alignnone size-medium" src="https://raw.githubusercontent.com/im201907/annex/master/20190708114047.png" width="506" height="399"></p>
+<p>3、获得网易云音乐ip：</p>
+<p>在 cmd 中输入命令后回车：ping music.163.com获取IP地址</p>
+<p><img class="alignnone size-medium" src="https://raw.githubusercontent.com/im201907/annex/master/20190708114243.png" width="518" height="307"></p>
+<p>4、新建批处理运行</p>
+<p>新建文件，重命名为run.bat，然后编辑如下内容保存：</p>
+<p><span style="color: #ff0000;"><strong>@echo off</strong></span><br><span style="color: #ff0000;"><strong>cd C:\UnblockNeteaseMusic-master</strong></span><br><span style="color: #ff0000;"><strong>node app.js -p 58000 -f 59.111.160.197</strong></span></p>
+<p>注：</p>
+<p>第二行中的路径为步骤一存放的路径</p>
+<p>第三行中的58000为任意无占用的端口，IP地址为第三步骤中获取的IP</p>
+<p>5、右键以管理员运行刚刚保存的run.bat脚本，此批处理不能关闭，关闭即停止服务</p>
+<p>6、配置网易云云代理服务后，重启网易云即可</p>
+<p><img class="alignnone " src="https://raw.githubusercontent.com/im201907/annex/master/20190708115141.png" width="802" height="526"></p>
+<p>7、配置手机端代理服务（以安卓手机为例），与安装UnblockNeteaseMusic的PC端同一局域网（如下内网穿透可使用FRP、NGROK、花生壳等工具），打开WIFI高级功能，选择手动代理，输入PC的IP地址与UnblockNeteaseMusic运行使用的端口，保存后重启手机版网易云即可</p>
+<p><img class="alignnone " src="https://raw.githubusercontent.com/im201907/annex/master/20190708115707.png" width="475" height="950"><img class="alignnone " src="https://raw.githubusercontent.com/im201907/annex/master/20190708115758.png" width="475" height="950"></p>
+<p>提供百度云下载（带后台运行脚本）：</p>
+<p><a href="https://pan.baidu.com/s/1gZJg1qdmlZ5_C-85K9FZgw" target="_blank" rel="noopener">点我下载（提取码：qsfd）</a></p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/1687679507">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/a512154224">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank"  href="tencent://message/?uin=512154224&Site=&Menu=yes">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-QQ"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+    </ul>
+    
+    <p>
+   <!--     <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span> -->
+        
+        Copyright &copy; 2017-至今 &nbsp;<a href="http://www.liangshitian.top"  title="四天博客">四天</a>&nbsp;&nbsp;  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

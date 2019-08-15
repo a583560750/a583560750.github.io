@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword"  content="undefined">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        利用Onedrive搭建OneIndex - 四天博客
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <link href="//at.alicdn.com/t/font_1335590_gsy2em9cgz.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 四天博客 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+             <li>
+                <a href="http://www.liangshitian.top/file" target="_blank"
+                    <i class="iconfont icon-gongxiangtubiaozhuangtaileicaozuolei55"></i>
+                    <span> &nbsp;资源</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 四天博客 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        利用Onedrive搭建OneIndex
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-04-03 17:18:42</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#onedrive" title="onedrive">onedrive</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#oneindex" title="oneindex">oneindex</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#资源站" title="资源站">资源站</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content no-indent">
+        <p>OneIndex特点：<br>不占用服务器空间，不走服务器流量，直接列OneDrive目录<a id="more"></a>，文件直链下载，无需数据库！<br>可用作个人网盘/图床/文件外链/公共资源下载/上传等</p>
+<p>需求：</p>
+<ol>
+<li>PHP空间，PHP 5.6+ 打开curl支持</li>
+<li>onedrive 账号 (个人、企业版或教育版/工作或学校帐户)</li>
+<li>oneindex 程序</li>
+</ol>
+<p>上传 Oneindex程序源码到根目录（master目录下文件，不要包含 master文件夹）<br>Oneindex源码的下载地址:<br><a href="https://codeload.github.com/donwa/oneindex/zip/master" target="_blank" rel="external">https://codeload.github.com/donwa/oneindex/zip/master</a></p>
+<p>站点配置：</p>
+<p>接下来打开站点，会出现系统检测，一切正常点击下一步</p>
+<p><img height="335"><img class="alignnone size-medium" src="https://raw.githubusercontent.com/im201907/annex/master/20190705182102.jpg" width="1582" height="519"></p>
+<p>按照提示一步一步操作即可：</p>
+<p>后台地址：<br><a href="https://xx.com/?/admin，默认密码：oneindex，网站根目录/home/wwwroot/xxx.com" target="_blank" rel="external">https://xx.com/?/admin，默认密码：oneindex，网站根目录/home/wwwroot/xxx.com</a></p>
+<p>添加计划任务（建议，但非必要）：</p>
+<p>可以通过宝塔的计划任务或crontab -e命令添加</p>
+<p>每小时刷新一次token：</p>
+<p>0 /具体路径/php /程序具体路径/one.php token:refresh</p>
+<p>每十分钟后台刷新一遍缓存：</p>
+<p>/10 * /具体路径/php /程序具体路径/one.php cache:refresh</p>
+<p>特殊文件实现功能：</p>
+<p>README.md、HEAD.md、.password特殊文件使用</p>
+<p>可以参考<a href="https://github.com/donwa/oneindex/tree/files" target="_blank" rel="external">https://github.com/donwa/oneindex/tree/files</a></p>
+<p>在文件夹底部添加说明：</p>
+<p>在onedrive的文件夹中添加README.md文件，使用markdown语法。</p>
+<p>在文件夹头部添加说明：</p>
+<p>在onedrive的文件夹中添加HEAD.md文件，使用markdown语法。</p>
+<p>加密文件夹：</p>
+<p>在onedrive的文件夹中添加.password文件，填入密码，密码不能为空。</p>
+<p>直接输出网页：</p>
+<p>在onedrive的文件夹中添加index.html文件，程序会直接输出网页而不列目录。</p>
+<p><span style="color: #ff0000;"><strong>绑定技巧（供参考）：</strong></span></p>
+<p>往往在最后一步绑定账号的时候会出现莫名其妙的问题，比如Onedrive账号登录失败、安装失败等等，可参考一下安装步骤：</p>
+<p><span style="color: #ff0000;">1、在浏览器A中根据安装教程一直到最后一步绑定账号时，先别点击绑定账号的按钮（如果已经点击这按钮可以删掉源码重新安装至绑定账号这一步）</span></p>
+<p><span style="color: #ff0000;">2、打开浏览器B，输入安装路径，点击下一步，其实默认已经记录在浏览器A中输入client_id与client_secret，点击下一步，点击绑定账号，然后手动输入邮箱、密码登录onedrive</span></p>
+<p><span style="color: #ff0000;">3、提示授权时，先别点击确定，等大概5秒左右，点击确定，等待跳转至提示安装成功即可</span></p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/1687679507">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/a512154224">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank"  href="tencent://message/?uin=512154224&Site=&Menu=yes">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-QQ"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+    </ul>
+    
+    <p>
+   <!--     <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span> -->
+        
+        Copyright &copy; 2017-至今 &nbsp;<a href="http://www.liangshitian.top"  title="四天博客">四天</a>&nbsp;&nbsp;  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword"  content="undefined">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        VMware安装黑群晖教程 - 四天博客
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <link href="//at.alicdn.com/t/font_1335590_gsy2em9cgz.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 四天博客 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+             <li>
+                <a href="http://www.liangshitian.top/file" target="_blank"
+                    <i class="iconfont icon-gongxiangtubiaozhuangtaileicaozuolei55"></i>
+                    <span> &nbsp;资源</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 四天博客 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        VMware安装黑群晖教程
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-07-24 12:15:10</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#DSM" title="DSM">DSM</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#群晖" title="群晖">群晖</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#虚拟机" title="虚拟机">虚拟机</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#vmware" title="vmware">vmware</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content no-indent">
+        <p>下面开始准备安装DSM的步骤，1.02b是一个神奇的引导，该引导可以随意升级到最新版本的DSM都不会出问题，所以本次使用这个引导。</p>
+<p>1、制作虚拟硬盘VHD</p>
+<p>打开cmd命令窗口，然后输入下面的命令，创建虚拟磁盘</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">diskpart</div></pre></td></tr></table></figure>
+<p>在新开的DOS窗口输入以下命令，每输入一行回车执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">create vdisk file=D:\synoboot.vhd maximum=256 type=expandable</div><div class="line">attach vdisk</div><div class="line">create partition primary</div><div class="line">exit</div></pre></td></tr></table></figure>
+<p><img class="" src="https://raw.githubusercontent.com/im201907/annex/master/20190724114229.png" width="637" height="333"></p>
+<p>此时在磁盘管理中已经成功创建并挂载虚拟磁盘</p>
+<p><img class="" src="https://raw.githubusercontent.com/im201907/annex/master/20190724114312.png" width="615" height="442"></p>
+<p>2、使用工具 Roadkil’s DiskImage 将引导文件写入到虚拟磁盘中，选择刚才创建的256MB的虚拟磁盘，然后选择引导的img映像，点击开始写入</p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724114432.png"></p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724114504.png"></p>
+<p>3、 写入后打开磁盘管理器，</p>
+<p>找到这个255M大小的虚拟磁盘，一定不要格式化，然后右击选择离VHD</p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724114741.png"></p>
+<p>4、新建虚拟机</p>
+<p>&nbsp;</p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724114841.png"></p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724114901.png"></p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724114936.png"></p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724115024.png"></p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724115044.png"></p>
+<p>内存建议512M或以上</p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724115101.png"></p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724115146.png"></p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724115217.png"></p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724115232.png"></p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724115307.png"></p>
+<p>选择刚才的VHD虚拟磁盘</p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724115344.png"></p>
+<p>编辑虚拟机设置，新增一个虚拟硬盘用于存储数据</p>
+<p><img class="" src="https://raw.githubusercontent.com/im201907/annex/master/20190724115532.png" width="535" height="520"></p>
+<p>5、启动虚拟机，利用搜索Synology Assistant安装</p>
+<p><img class="" src="https://raw.githubusercontent.com/im201907/annex/master/20190724121007.png" width="664" height="374"></p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724121204.png"></p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724121306.png"></p>
+<p>手动安装</p>
+<p><img class="" src="https://raw.githubusercontent.com/im201907/annex/master/20190724121333.png" width="612" height="413"></p>
+<p>选择DSM_DS3617xs_15284.pat点击立即安装</p>
+<p><img class="" src="https://raw.githubusercontent.com/im201907/annex/master/20190724121407.png" width="807" height="599"></p>
+<p><img src="https://raw.githubusercontent.com/im201907/annex/master/20190724121523.png"></p>
+<p>等待安装完成即可</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/1687679507">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/a512154224">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank"  href="tencent://message/?uin=512154224&Site=&Menu=yes">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-QQ"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+    </ul>
+    
+    <p>
+   <!--     <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span> -->
+        
+        Copyright &copy; 2017-至今 &nbsp;<a href="http://www.liangshitian.top"  title="四天博客">四天</a>&nbsp;&nbsp;  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
